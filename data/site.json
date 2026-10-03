@@ -2,7 +2,7 @@
   "generado": "2026-10-03",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.2.9",
+    "version": "0.3.0",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -17,18 +17,18 @@
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
       "mb": 583.1,
-      "sha256": "5a8807b9995b25956386c79842ce8ad8f2aeaa30b8514ce1446fd664f3ce0bd0",
+      "sha256": "d63abc308c2230fee682d8fc34d1bb433f2904785d54f172c0627c9dccdd9471",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.9/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.0/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.2.9-win-x64.zip",
+      "archivo": "LiloSafio-0.3.0-win-x64.zip",
       "mb": 574.8,
-      "sha256": "ecb8f412e347c945a936e500d3df991d97120a92badf3b869f41eaca2f2bfbb5",
+      "sha256": "804a67f0b72b11e77d0c0805cfcc3cfd85f83c8247592f7886208994637d47f2",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.9/LiloSafio-0.2.9-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.0/LiloSafio-0.3.0-win-x64.zip"
     }
   },
   "requisitos": [
@@ -59,6 +59,18 @@
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.3.0",
+      "title": "Cada entrada al juego queda anotada en tu Discord",
+      "changes": [
+        "Al abrir Minecraft se avisa a un canal de Discord, y al cerrar tambien.",
+        "Se anota el nombre de Minecraft y el usuario de Discord de quien entro.",
+        "El token del bot NO va dentro del launcher: lo guarda un Worker de Cloudflare.",
+        "Antes de escribir, el Worker comprueba que ese usuario este de verdad en tu servidor.",
+        "Hay un tope de mensajes por usuario y por hora, para que nadie llene el canal.",
+        "Si no hay nada configurado, no pasa nada: el launcher sigue igual."
+      ]
+    },
     {
       "version": "0.2.9",
       "title": "Las actualizaciones ya no se cortan a mitad",

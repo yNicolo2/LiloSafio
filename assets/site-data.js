@@ -54,7 +54,7 @@ window.LILO_DATA = {
   "servidor": {
     "ok": true,
     "miembros": 9,
-    "en_linea": 4,
+    "en_linea": 5,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "api": "",
@@ -304,6 +304,14 @@ window.LILO_DATA = {
     }
   ],
   "versiones": [
+    {
+      "version": "0.2.9",
+      "titulo": "LiloSafio 0.2.9",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.9/LiloSafioInstalador.exe",
+      "sha256": "5a8807b9995b25956386c79842ce8ad8f2aeaa30b8514ce1446fd664f3ce0bd0"
+    },
     {
       "version": "0.2.8",
       "titulo": "LiloSafio 0.2.8",

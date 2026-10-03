@@ -2,7 +2,7 @@
   "generado": "2026-10-03",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.2.8",
+    "version": "0.2.9",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -17,18 +17,18 @@
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
       "mb": 583.1,
-      "sha256": "322bf64f08ecb621741056f0336250b53dc6b6798b3815a921988a532abdabee",
+      "sha256": "5a8807b9995b25956386c79842ce8ad8f2aeaa30b8514ce1446fd664f3ce0bd0",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.8/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.9/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.2.8-win-x64.zip",
+      "archivo": "LiloSafio-0.2.9-win-x64.zip",
       "mb": 574.8,
-      "sha256": "eeaccc9aa4b6b7ca1e62ed760eec710aa45ce2ccaf68915c8420be0df6639bc2",
+      "sha256": "ecb8f412e347c945a936e500d3df991d97120a92badf3b869f41eaca2f2bfbb5",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.8/LiloSafio-0.2.8-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.9/LiloSafio-0.2.9-win-x64.zip"
     }
   },
   "requisitos": [
@@ -52,13 +52,25 @@
   "servidor": {
     "ok": true,
     "miembros": 9,
-    "en_linea": 5,
+    "en_linea": 4,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "api": "",
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.2.9",
+      "title": "Las actualizaciones ya no se cortan a mitad",
+      "changes": [
+        "Arreglado «el instalador es demasiado grande»: el tope de la descarga eran 300 MiB y el instalador pesa 583.",
+        "Ningún jugador podía actualizar: la descarga se paraba siempre a mitad.",
+        "El tope ahora son 1,5 GiB, con margen de sobra para que el instalador pueda crecer.",
+        "La descarga se lee en trozos de 1 MiB en vez de 64 KiB: va bastante mas rápida.",
+        "Añadida una prueba que baja el instalador entero y comprueba su huella, que es lo que faltaba.",
+        "El selfcheck mide el instalador de verdad y avisa si el tope se queda corto otra vez."
+      ]
+    },
     {
       "version": "0.2.8",
       "title": "Los mods llegan a su sitio y se ve el instalador",

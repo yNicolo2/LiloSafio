@@ -293,6 +293,14 @@ window.LILO_DATA = {
   ],
   "versiones": [
     {
+      "version": "0.2.8",
+      "titulo": "LiloSafio 0.2.8",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.8/LiloSafioInstalador.exe",
+      "sha256": "322bf64f08ecb621741056f0336250b53dc6b6798b3815a921988a532abdabee"
+    },
+    {
       "version": "0.2.7",
       "titulo": "LiloSafio 0.2.7",
       "fecha": "2026-10-03",

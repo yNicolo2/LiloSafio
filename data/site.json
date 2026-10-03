@@ -2,7 +2,7 @@
   "generado": "2026-10-03",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -17,18 +17,18 @@
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
       "mb": 583.1,
-      "sha256": "d63abc308c2230fee682d8fc34d1bb433f2904785d54f172c0627c9dccdd9471",
+      "sha256": "b7ad3eff7276776c5d61d4fcf855577bb4cbc8838aaab7ffa7750e9805bb9919",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.0/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.1/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.3.0-win-x64.zip",
+      "archivo": "LiloSafio-0.3.1-win-x64.zip",
       "mb": 574.8,
-      "sha256": "804a67f0b72b11e77d0c0805cfcc3cfd85f83c8247592f7886208994637d47f2",
+      "sha256": "662216f9c5fef5fced7d1c20c98d6714150402b68a6efa7a6beefbc92dfaae9d",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.0/LiloSafio-0.3.0-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.1/LiloSafio-0.3.1-win-x64.zip"
     }
   },
   "requisitos": [
@@ -51,7 +51,7 @@
   ],
   "servidor": {
     "ok": true,
-    "miembros": 9,
+    "miembros": 8,
     "en_linea": 5,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
@@ -59,6 +59,19 @@
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.3.1",
+      "title": "El bot de Discord, en condiciones de estar encendido",
+      "changes": [
+        "El bot de Discord, en un proyecto propio: bot\\, con el token fuera del codigo.",
+        "Los sorteos se guardan en disco: antes se perdian en cada reinicio del proceso.",
+        "El bot reconecta solo y dice por que se caio, en vez de quedarse muerto en silencio.",
+        "Al apagarse bien, Discord no tarda un minuto en marcarlo como fuera de linea.",
+        "Añadido /avisos, que dice en que canal se anotan las entradas al juego.",
+        "npm run comprobar dice que falta y por que antes de arrancar.",
+        "El token del bot sale del .env, y .env esta en .gitignore."
+      ]
+    },
     {
       "version": "0.3.0",
       "title": "Cada entrada al juego queda anotada en tu Discord",

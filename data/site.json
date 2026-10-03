@@ -315,6 +315,14 @@
   ],
   "versiones": [
     {
+      "version": "0.3.0",
+      "titulo": "LiloSafio 0.3.0",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.0/LiloSafioInstalador.exe",
+      "sha256": "d63abc308c2230fee682d8fc34d1bb433f2904785d54f172c0627c9dccdd9471"
+    },
+    {
       "version": "0.2.9",
       "titulo": "LiloSafio 0.2.9",
       "fecha": "2026-10-03",

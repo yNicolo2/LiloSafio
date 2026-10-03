@@ -22,7 +22,7 @@ window.LILO_DATA = {
       "sha256": "8d086cfdf600fd6469be6a3f7a2188ba4499b53b949245e3c9fbe39ce4a610ef",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "descargas/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/v0.2.5/LiloSafioInstalador.exe"
     },
     "respaldo": {
       "archivo": "LiloSafio-0.2.5-win-x64.zip",
@@ -30,7 +30,7 @@ window.LILO_DATA = {
       "sha256": "a2baa12c261827527d8e0f14c7c49433064832632c7dfcae11f4de1a19296453",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "descargas/LiloSafio-0.2.5-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/v0.2.5/LiloSafio-0.2.5-win-x64.zip"
     }
   },
   "requisitos": [
@@ -54,7 +54,7 @@ window.LILO_DATA = {
   "servidor": {
     "ok": true,
     "miembros": 9,
-    "en_linea": 5,
+    "en_linea": 4,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"

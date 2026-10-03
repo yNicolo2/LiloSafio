@@ -17,18 +17,18 @@
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
       "mb": 583.1,
-      "sha256": "8d086cfdf600fd6469be6a3f7a2188ba4499b53b949245e3c9fbe39ce4a610ef",
+      "sha256": "3db4c43af450ae6a8509d38b3c5ce16d6e47e720039fd63b0765bfc03a75b4ae",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.5/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.6/LiloSafioInstalador.exe"
     },
     "respaldo": {
       "archivo": "LiloSafio-0.2.6-win-x64.zip",
-      "mb": null,
-      "sha256": "",
+      "mb": 574.8,
+      "sha256": "b8f1a1cb22d4383b91c72bc0885a243a4531fbca78193abaa539cbbd9cd483e3",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.5/LiloSafio-0.2.6-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.6/LiloSafio-0.2.6-win-x64.zip"
     }
   },
   "requisitos": [

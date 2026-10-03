@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es" class="sin-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiloSafio · Descargar el launcher</title>
+<meta name="description" content="LiloSafio: instalador de un solo archivo para Windows con el servidor y su modpack. Descargalo, doble clic y a jugar.">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="icon" href="assets/logo_small.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="envoltorio">
+    <a class="marca" href="index.html">
+      <img src="assets/logo_small.png" alt="">
+      LiloSafio <span class="ver" data-version>v—</span>
+    </a>
+    <nav class="nav">
+      <a href="#descargar">Descargar</a>
+      <a href="#notas">Novedades</a>
+      <a href="legal.html" class="legal">Aviso legal</a>
+    </nav>
+  </div>
+</header>
+
+<main class="envoltorio">
+  <section class="portada">
+    <span class="sello" style="--i:0">Minecraft 1.21.1 · NeoForge</span>
+    <h1 style="--i:1">Tu servidor de LiloSafio,<br><span class="destacado">en un solo archivo</span></h1>
+    <p class="entradilla" style="--i:2">
+      Descargas el instalador, le das doble clic y ya está. No hay que descomprimir
+      nada, ni copiar carpetas, ni decidir qué archivo es el bueno.
+    </p>
+    <div class="acciones" style="--i:3">
+      <a class="boton principal" href="#" data-descarga>Descargar el instalador</a>
+      <a class="boton secundario" href="#como">Cómo funciona</a>
+    </div>
+    <p class="nota-descarga" style="--i:4">
+      <span data-nombre>LiloSafioInstalador.exe</span> · <span data-tamano>…</span><br>
+      <a data-respaldo href="#" hidden>¿Tu antivirus te lo bloquea? Usa el .zip de repuesto</a>
+    </p>
+
+    <div class="servidor" data-servidor hidden>
+      <span class="servidor-luz" aria-hidden="true"></span>
+      <p class="servidor-texto">
+        <span data-servidor-linea>…</span>
+        <a class="servidor-enlace" data-servidor-enlace href="#"
+           rel="noopener">Entrar al Discord</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="seccion" id="descargar" data-revelar>
+    <h2 class="titulo">Descarga</h2>
+    <p class="bajada">Coge el instalador. Es un archivo y ya lo lleva todo dentro.</p>
+    <div class="descargas">
+      <div class="tarjeta descarga destacada">
+        <span class="etiqueta">Recomendado</span>
+        <h3>Instalador de un solo archivo</h3>
+        <p>Doble clic y se instala. Es lo único que necesitas.</p>
+        <p class="tamano" data-descarga-tamano>…</p>
+        <p class="marca-archivo" data-descarga-nombre>—</p>
+        <p class="hash" data-hash></p>
+        <p style="margin-top:16px"><a class="boton principal pequeno" href="#" data-descarga>Descargar</a></p>
+      </div>
+      <div class="tarjeta descarga">
+        <span class="etiqueta">Respaldo</span>
+        <h3>Carpeta comprimida (.zip)</h3>
+        <p>Solo si tu antivirus bloquea el instalador. Se extrae y funciona igual.</p>
+        <p class="tamano" data-respaldo-tamano>—</p>
+        <p class="marca-archivo" data-respaldo-nombre>—</p>
+        <p style="margin-top:16px"><a class="boton secundario pequeno" href="#" data-respaldo hidden>Descargar .zip</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="como" data-revelar>
+    <h2 class="titulo">Cómo funciona</h2>
+    <p class="bajada">Cuatro pasos y no hay que saber nada raro.</p>
+    <div class="rejilla">
+      <div class="tarjeta">
+        <span class="glifo">⬇</span>
+        <h3>1. Descargas</h3>
+        <p>Un archivo. El de arriba, el que dice <em>Recomendado</em>.</p>
+      </div>
+      <div class="tarjeta">
+        <span class="glifo">⚙</span>
+        <h3>2. Doble clic</h3>
+        <p>La primera vez tarda unos 20 segundos mientras se prepara. Saltará un cartel: es normal.</p>
+      </div>
+      <div class="tarjeta">
+        <span class="glifo">✔</span>
+        <h3>3. Se instala solo</h3>
+        <p>Te deja el acceso directo en el escritorio y descarga el modpack.</p>
+      </div>
+      <div class="tarjeta">
+        <span class="glifo">▶</span>
+        <h3>4. A jugar</h3>
+        <p>Abres «LiloSafio Launcher» y le das a <strong>Jugar</strong>. A partir de ahí arranca rápido.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="notas" data-revelar>
+    <h2 class="titulo">Novedades</h2>
+    <p class="bajada">Historial completo de versiones, el mismo que ves dentro del launcher.</p>
+    <div class="notas" data-notas></div>
+  </section>
+
+  <section class="seccion" id="capturas" data-revelar>
+    <h2 class="titulo">Cómo se ve</h2>
+    <p class="bajada">Esto es lo que te va a aparecer al abrir el launcher.</p>
+    <div class="capturas">
+      <figure class="captura">
+        <img src="assets/capturas/inicio.png" width="1040" height="680" loading="lazy"
+             alt="La pantalla principal del launcher de LiloSafio, con el botón de jugar y el acceso a Discord.">
+        <figcaption>La pantalla principal. El botón grande es «Jugar».</figcaption>
+      </figure>
+      <figure class="captura">
+        <img src="assets/capturas/ajustes.png" width="1040" height="680" loading="lazy"
+             alt="La pantalla de ajustes, con la memoria asignada y la comprobación de actualizaciones.">
+        <figcaption>Los ajustes, con la memoria que le dejas al juego.</figcaption>
+      </figure>
+      <figure class="captura">
+        <img src="assets/capturas/acercade.png" width="1040" height="680" loading="lazy"
+             alt="La pantalla de Acerca de con la lista de versiones y los cambios de cada una.">
+        <figcaption>«Acerca de»: qué cambió en cada versión.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="seccion" id="faq" data-revelar>
+    <h2 class="titulo">Preguntas frecuentes</h2>
+    <p class="bajada">Lo que más se pregunta. Si tu duda no está aquí, escríbela en el Discord.</p>
+
+    <details class="faq-item">
+      <summary>Mi antivirus dice que el instalador es sospechoso. ¿Es un virus?</summary>
+      <p>
+        No. El instalador es un ejecutable que se descomprime a sí mismo, y ese formato
+        es exactamente el que algunos antivirus marcan por costumbre. Es un falso positivo
+        conocido. Si te lo bloquean, descarga el <a href="#descargar">.zip de repuesto</a>:
+        lleva lo mismo y no da problemas.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>¿En qué Windows funciona?</summary>
+      <p>
+        En Windows 10 y 11 de 64 bits. En Mac, Linux o móvil no funciona, y no hay
+        versión para esos sistemas.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>¿Puedo jugar sin ser miembro del Discord?</summary>
+      <p>
+        No. Para entrar al servidor hay que estar dentro del Discord, es el único
+        requisito. El launcher se instala y se usa igual; lo único que no se puede es
+        entrar al servidor sin estar dentro.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>¿Necesito comprar Minecraft?</summary>
+      <p>
+        Sí. Necesitas una cuenta de Minecraft (la de Java, la de Bedrock no vale). El
+        launcher no incluye el juego: usa tu cuenta para que lo obtengas de Mojang como
+        en cualquier launcher normal.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>¿Cuánto ocupa?</summary>
+      <p>
+        El instalador ronda los <span data-tamano>…</span>. Deja unos 8 GB libres en el
+        disco, porque el juego y los mods ocupan la mayor parte.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>¿Se puede desinstalar?</summary>
+      <p>
+        Sí. El launcher tiene un desinstalador que dice exactamente qué va a borrar
+        antes de hacerlo. Si lo borras a mano, se lleva la carpeta
+        <code>%LOCALAPPDATA%\LiloSafio</code>.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>¿Se actualiza solo?</summary>
+      <p>
+        Se comprueba si hay versión nueva desde Ajustes. Si instalas una versión
+        posterior, tu cuenta, tus mundos y tus ajustes se conservan.
+      </p>
+    </details>
+  </section>
+
+  <section class="seccion" id="requisitos" data-revelar>
+    <h2 class="titulo">Qué hace falta</h2>
+    <div class="rejilla">
+      <div class="tarjeta"><h3>Windows</h3><p>10 o superior, de 64 bits. No funciona en Mac ni en móvil.</p></div>
+      <div class="tarjeta"><h3>Espacio</h3><p>Unos 8 GB libres. El juego se lleva la mayor parte.</p></div>
+      <div class="tarjeta"><h3>Cuentas</h3><p>Una de Minecraft (la de Java) y una de Discord.</p></div>
+      <div class="tarjeta"><h3>Red</h3><p>Solo al entrar al servidor y al descargar el juego.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie" data-revelar>
+  <div class="rejilla-pie">
+    <div class="col">
+      <h4>LiloSafio</h4>
+      <p>Instalador y launcher de LiloSafio.<br>Proyecto personal y sin ánimo de lucro.</p>
+    </div>
+    <div class="col">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="#descargar">Descargar</a></li>
+        <li><a href="#capturas">Cómo se ve</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+        <li><a href="#notas">Novedades</a></li>
+        <li><a href="legal.html">Aviso legal, privacidad y copyright</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://discord.gg/wD5WvdSYgG" rel="noopener">Servidor de Discord</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="creado-por">
+    <img class="cara" data-owner-piel src="assets/cabeza-yNicolo.png" alt="" width="72" height="72">
+    <div>
+      <p class="creado-texto">Creado por <strong data-owner-nombre>yNicolo</strong></p>
+      <p class="creado-rol" data-owner-rol>Owner de LiloSafio</p>
+    </div>
+  </div>
+
+  <div class="aviso-legal">
+    <p><strong>LiloSafio no está afiliado, asociado, autorizado ni respaldado por
+    Mojang Studios, Microsoft, Discord Inc. ni por los autores de los mods que
+    incluye.</strong> «Minecraft» es una marca de Mojang Studios; «Discord» es una
+    marca de Discord Inc. Los mods pertenecen a sus respectivos autores y se usan
+    bajo sus respectivas licencias.</p>
+    <p>Este sitio no usa cookies de seguimiento ni analítica. Al usar el launcher
+    aceptas el <a href="legal.html#condiciones">aviso legal</a>, la
+    <a href="legal.html#privacidad">política de privacidad</a> y la
+    <a href="legal.html#derechos">política de derechos de autor</a>.</p>
+  </div>
+</footer>
+
+<script src="assets/site-data.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
+

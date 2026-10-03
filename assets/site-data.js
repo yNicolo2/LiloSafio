@@ -1,0 +1,264 @@
+// Generado por tools\build_site.py. NO editar a mano:
+// se rehace en cada build desde config.py y changelog.py.
+window.LILO_DATA = {
+  "generado": "2026-10-02",
+  "app": {
+    "nombre": "LiloSafio",
+    "version": "0.2.5",
+    "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
+    "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
+  },
+  "owner": {
+    "nombre": "yNicolo",
+    "rol": "Owner de LiloSafio",
+    "pais": "España",
+    "piel": "assets/cabeza-yNicolo.png",
+    "discord": "https://discord.gg/wD5WvdSYgG"
+  },
+  "descargas": {
+    "principal": {
+      "archivo": "LiloSafioInstalador.exe",
+      "mb": 583.1,
+      "sha256": "8d086cfdf600fd6469be6a3f7a2188ba4499b53b949245e3c9fbe39ce4a610ef",
+      "titulo": "Instalador de un solo archivo",
+      "nota": "Doble clic y se instala. No hay que descomprimir nada.",
+      "url": "descargas/LiloSafioInstalador.exe"
+    },
+    "respaldo": {
+      "archivo": "LiloSafio-0.2.5-win-x64.zip",
+      "mb": 574.8,
+      "sha256": "a2baa12c261827527d8e0f14c7c49433064832632c7dfcae11f4de1a19296453",
+      "titulo": "Carpeta comprimida (.zip)",
+      "nota": "Solo si el antivirus te bloquea el archivo .exe.",
+      "url": "descargas/LiloSafio-0.2.5-win-x64.zip"
+    }
+  },
+  "requisitos": [
+    {
+      "nombre": "Windows",
+      "detalle": "10 o superior, de 64 bits"
+    },
+    {
+      "nombre": "Espacio",
+      "detalle": "Unos 8 GB libres (el juego ocupa la mayor parte)"
+    },
+    {
+      "nombre": "Red",
+      "detalle": "Solo hace falta para entrar al servidor y descargar el juego"
+    },
+    {
+      "nombre": "Cuentas",
+      "detalle": "Una cuenta de Minecraft y una de Discord"
+    }
+  ],
+  "servidor": {
+    "ok": true,
+    "miembros": 9,
+    "en_linea": 5,
+    "nombre": "LiloSafio",
+    "invitacion": "wD5WvdSYgG",
+    "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
+  },
+  "changelog": [
+    {
+      "version": "0.2.5",
+      "title": "Un solo archivo y ya funciona",
+      "changes": [
+        "Ahora se reparte UN solo archivo .exe: doble clic y se abre el instalador.",
+        "No hay que descomprimir ni copiar carpetas: el archivo se abre solo.",
+        "El launcher instalado sigue arrancando rapido: no se descomprime cada vez.",
+        "Arreglado el build: PyInstaller ya no se corta con sus propios mensajes.",
+        "Arreglado el empaquetado: los archivos con mayusculas ya no se dan por perdidos."
+      ]
+    },
+    {
+      "version": "0.2.4",
+      "title": "Mucho mas pequeno, igual de bonito",
+      "changes": [
+        "El instalador baja de 972 MB a unos 800: ahora se puede mandar por mensaje.",
+        "Fuera los recursos de depuracion de Qt: eran 77 MB que no se ven nunca.",
+        "Fuera los 53 idiomas de Chromium y de Qt: solo se quedan espanol e ingles.",
+        "Fuera NumPy, que no se usaba: 26 MB de mas.",
+        "Fuera el QML de Qt, que no se usa: la interfaz es HTML.",
+        "Nada de esto cambia el aspecto ni un solo texto: es peso que no se veia.",
+        "Todo lo demade igual: Minecraft 1.21.1, NeoForge y los 63 mods."
+      ]
+    },
+    {
+      "version": "0.2.3",
+      "title": "Instala bien y la pantalla de inicio respira",
+      "changes": [
+        "Arreglado el «Failed to load Python DLL»: el launcher se desplegaba sin su carpeta _internal.",
+        "Ahora el instalador comprueba el paquete ANTES de copiar y avisa si le falta algo.",
+        "La copia se hace aparte y solo se cambia por la buena cuando esta verificada.",
+        "Un despliegue a medias ya no se da por bueno: se rehace en la siguiente instalacion.",
+        "Se va el aviso de RAM de la pantalla de inicio; el veredicto se lee en Configuracion.",
+        "Se va el hueco que dejaba la tarjeta del perfil debajo de tu avatar.",
+        "Preparando Jugar ahora teaches el porcentaje: se ve que esta avanzando.",
+        "La barra se mueve de verdad: Minecraft, NeoForge y los mods van por turnos.",
+        "El texto de al lado dice que esta haciendo en ese momento.",
+        "Ya no se abre la ventana negra de consola encima del launcher."
+      ]
+    },
+    {
+      "version": "0.2.2",
+      "title": "El juego arranca de verdad",
+      "changes": [
+        "Jugar YA arranca Minecraft: antes solo se descomprimian los mods y no habia juego.",
+        "Se descarga Minecraft 1.21.1, sus librerias y sus natives, y se instala NeoForge 21.1.",
+        "La primera vez tarda unos minutos bajando el juego. Despues, pulsar y jugar.",
+        "Arreglado el «list.index(x): x not in list»: era un fallo al escribir el registro de arranque.",
+        "Arreglado el «Too small maximum heap»: la memoria iba sin MB, asi que valian 4608 bytes.",
+        "Los mods ya no rompen el arranque: NeoForge entra por su cargador, no por el de vanilla.",
+        "Se deja de bajar lo de macOS: las librerias se filtran por tu sistema y tu arquitectura.",
+        "El modpack Milongsafio.zip dice su version y su autor dentro del manifiesto."
+      ]
+    },
+    {
+      "version": "0.2.1",
+      "title": "Acerca de con el autor",
+      "changes": [
+        "«Acerca de» dice quien hizo el launcher: Creado por yNicolo.",
+        "Su cabeza de Minecraft sale al lado, con su piel real de Mojang.",
+        "Si Mojang no responde, se dibuja el Steve de respaldo en vez de un hueco roto.",
+        "Se va el historial de los momentos del proyecto: ahora Acerca de va al grano.",
+        "El modpack ya viene COMPLETO: los 63 .jar de los mods viajan dentro del instalador.",
+        "Antes solo venía la configuración, así que el juego no tenía nada que cargar."
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "title": "Servidor obligatorio y sesion cifrada",
+      "changes": [
+        "Estar en el servidor de Discord es OBLIGATORIO para jugar.",
+        "Se quita «Ahora no»: no se puede entrar sin Discord.",
+        "Jugar se niega a arrancar si no hay conexion, sesion o servidor.",
+        "El bloqueo lo comprueba Discord, no el launcher: un .exe modificado no vale.",
+        "Comprobacion del rol de miembro cuando lo configures en el servidor.",
+        "Tu token de Discord se guarda cifrado con Windows (DPAPI).",
+        "Otro usuario del mismo PC ya no puede leer tu sesion.",
+        "El registro nunca escribe el token entero, ni al depurar.",
+        "El changelog del simulador se genera desde el de verdad: no hay dos copias."
+      ]
+    },
+    {
+      "version": "0.1.9",
+      "title": "El modpack entra y la memoria se usa",
+      "changes": [
+        "Jugar ahora arranca Minecraft de verdad con el nombre que escribiste.",
+        "La memoria que eliges llega a Java (-Xmx). Antes era un numero decorativo.",
+        "Aviso de memoria: te dice si los GB que pusiste sirven antes de que el juego muera.",
+        "Boton «Arreglar»: pone la memoria recomendada dejando 2 GB para Windows.",
+        "Se descomprime Milongsafio.zip en la carpeta del juego, con la configuración en su sitio.",
+        "Se avisa de cuántos mods hay de verdad y de los que faltan.",
+        "En Discord sale «Jugando LiloSafio con <tu nombre>» mientras estas dentro.",
+        "Java 21: se avisa si tienes una versión antigua, que Minecraft 1.21.1 no arranca con ella."
+      ]
+    },
+    {
+      "version": "0.1.8",
+      "title": "El avatar de Discord se ve",
+      "changes": [
+        "Correccion: ya sale TU foto de perfil en el riel y en la tarjeta de Discord.",
+        "El avatar se descarga a tu equipo y se pinta desde ahi, sin depender de internet.",
+        "Ya no se pierde el icono de Discord al abrir el launcher.",
+        "Si no tienes foto, se usa el avatar que Discord te asigna.",
+        "Se comprueba que lo descargado es una imagen de verdad antes de guardarlo."
+      ]
+    },
+    {
+      "version": "0.1.7",
+      "title": "Puerta de acceso con Discord",
+      "changes": [
+        "Pantalla de bienvenida al abrir LiloSafio: entra con Discord y a jugar.",
+        "Botón grande de acceso con el estilo de los launchers grandes.",
+        "La puerta se cierra sola en cuanto entras con Discord.",
+        "Si el acceso falla, el motivo se escribe en la propia pantalla, sin adivinar.",
+        "Se puede entrar sin Discord: si la conexion falla, el launcher sigue siendo usable.",
+        "Se ha quitado la sesion con Microsoft / Minecraft y todo su codigo.",
+        "Correccion: el receptor local se levanta ANTES de abrir el navegador.",
+        "Correccion: si falta registrar la redireccion, el error dice que copiar y donde.",
+        "La redireccion vive en un solo sitio (config.DISCORD_REDIRECT_URI)."
+      ]
+    },
+    {
+      "version": "0.1.6",
+      "title": "Cuentas reales y registro de cambios",
+      "changes": [
+        "Sesion real de Minecraft con Microsoft (retirada en la 0.1.7).",
+        "Changelog completo en Acerca de, desde la 0.1.0.",
+        "Correccion: el aviso de unirse al servidor vuelve a salir en cada arranque.",
+        "Correccion: «Ya me he unido» ya no revienta al comprobar la pertenencia.",
+        "Respaldo del icono si el avatar del CDN no se puede descargar."
+      ]
+    },
+    {
+      "version": "0.1.5",
+      "title": "Discord real y acceso obligatorio al servidor",
+      "changes": [
+        "La cuenta de Discord real se ve en el riel: avatar, @usuario y si estas dentro o no.",
+        "«Unirse al servidor» siempre visible: ya no se esconde si no hay sesion de Minecraft.",
+        "Comprobacion real de pertenencia con «Ya me he unido» (pregunta a Discord, no supone).",
+        "Botones «Conectar Discord» y «Desconectar» (desconectar revoca el token en Discord).",
+        "El aviso al arrancar vuelve a salir mientras falte unirse al servidor."
+      ]
+    },
+    {
+      "version": "0.1.4",
+      "title": "Actualizacion sin perder nada",
+      "changes": [
+        "Actualizar desde una version anterior conserva mundos, mods, cuenta y ajustes.",
+        "El instalador detecta la instalacion previa y cambia «Instalar» por «Actualizar».",
+        "Se respalda el manifiesto viejo antes de sobrescribirlo.",
+        "El acceso directo pasa a abrir el launcher (antes abria el instalador)."
+      ]
+    },
+    {
+      "version": "0.1.3",
+      "title": "Ajustes que de verdad se guardan",
+      "changes": [
+        "Memoria RAM ajustable y comprobacion de lo que hay en el PC.",
+        "LiloSafio no instala Java: detecta el que ya tengas y avisa si falta.",
+        "Comprobacion de actualizaciones desde Ajustes.",
+        "Desinstalador que dice exactamente que va a borrar antes de hacerlo."
+      ]
+    },
+    {
+      "version": "0.1.2",
+      "title": "El launcher de verdad",
+      "changes": [
+        "Pantalla principal con riel, Inicio, Ajustes, Acerca de y Registro.",
+        "Piel real del jugador y cuerpo completo en el riel.",
+        "Discord Rich Presence: LiloSafio aparece en el juego y en el perfil.",
+        "Sesion offline con nombre de jugador y UUID propio, sin pedir nada por internet."
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "title": "Instalador animado",
+      "changes": [
+        "Instalador en 3 pasos con progreso real y diseño animado.",
+        "Elige carpeta de instalacion y crea el acceso directo del escritorio.",
+        "El instalador SIEMPRE abre el asistente, nunca el launcher por su cuenta."
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "title": "Primera version",
+      "changes": [
+        "Instalador y launcher con la interfaz de LiloSafio.",
+        "Solo Minecraft 1.21.1 con NeoForge: una version, sin selector.",
+        "Botones de Discord para entrar al servidor de LiloSafio.",
+        "Assets generados por codigo y empaquetado con PyInstaller."
+      ]
+    }
+  ],
+  "legal": {
+    "discord_app_id": "1554662437247123506",
+    "discord_servidor": "LiloSafio",
+    "discord_join_required": true,
+    "discord_scopes": "identify guilds guilds.members.read",
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.252"
+  }
+};

@@ -1,0 +1,22 @@
+{
+  "_COMO": "Lo UNICO que tienes que editar. El resto (version, changelog, tamanos, hashes, la descarga) se genera solo con tools\\build_site.py. Relanza el build y la web queda al dia.",
+
+  "owner": {
+    "name": "yNicolo",
+    "role": "Owner de LiloSafio",
+    "country": "España",
+    "skin": "cabeza-yNicolo.png"
+  },
+
+  "contact": {
+    "discord": "https://discord.gg/wD5WvdSYgG"
+  },
+
+  "_DESCARGA": "El instalador se copia dentro de la propia web, en site\\descargas\\, y el boton es un enlace normal. Asi que no hay nada externo: subes la carpeta site\\ y ya. No hace falta GitHub ni ningun hosting aparte.",
+
+  "descargas": {
+    "carpeta": "descargas",
+    "exe": "LiloSafioInstalador.exe",
+    "zip": "LiloSafio-0.2.5-win-x64.zip"
+  }
+}

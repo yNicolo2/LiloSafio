@@ -2,3 +2,7 @@
 # Ademas, GitHub Pages no publica un sitio de mas de 1 GB.
 descargas/
 _subir.ps1
+
+# El bot de Discord es privado. No se publica ni la pagina ni el codigo: vive solo
+# en la carpeta bot\ del proyecto, en local.
+bot/

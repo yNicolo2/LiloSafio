@@ -1,4 +1,4 @@
-﻿/* LiloSafio · web
+/* LiloSafio · web
    Los colores salen de los MISMOS tokens que el launcher (src/lilasafio/ui/css/
    tokens.css). Si cambias la marca, se cambia en un sitio y en los dos.
 
@@ -754,14 +754,3 @@ h1 .destacado {
   .legal { padding-top: 36px; }
   .servidor { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
 }
-
-/* La linea del bot. Va con su propio estilo porque no es una nota de la
-   descarga: es una entrada a otra cosa distinta, y vestirse igual que el resto
-   haria que el que va a jugar la leyera sin entender. */
-.nota-boton {
-  margin-top: 14px;
-  font-size: .88rem;
-  color: var(--text-dim);
-}
-.nota-boton a { color: var(--text-muted); text-decoration: underline; }
-.nota-boton a:hover { color: var(--text); }

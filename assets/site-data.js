@@ -4,7 +4,7 @@ window.LILO_DATA = {
   "generado": "2026-10-02",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -25,12 +25,12 @@ window.LILO_DATA = {
       "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.5/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.2.5-win-x64.zip",
-      "mb": 574.8,
-      "sha256": "a2baa12c261827527d8e0f14c7c49433064832632c7dfcae11f4de1a19296453",
+      "archivo": "LiloSafio-0.2.6-win-x64.zip",
+      "mb": null,
+      "sha256": "",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.5/LiloSafio-0.2.5-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.5/LiloSafio-0.2.6-win-x64.zip"
     }
   },
   "requisitos": [
@@ -54,12 +54,24 @@ window.LILO_DATA = {
   "servidor": {
     "ok": true,
     "miembros": 9,
-    "en_linea": 5,
+    "en_linea": 4,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.2.6",
+      "title": "Las actualizaciones ya funcionan de verdad",
+      "changes": [
+        "Arreglado «Buscar actualizacion»: miraba en un repositorio que no existe, asi que no podia funcionar.",
+        "Ahora consulta las releases de GitHub, que es lo unico que se publica solo sin montar nada.",
+        "Detecta la version anterior y ofrece instalarla: descarga el .exe y lo deja preparado.",
+        "El boton de actualizar ya no cae en un JSON que hay que editar a mano.",
+        "Nuevo boton «Sitio web» en el riel, junto al de unirse al servidor.",
+        "La web ya se ve bien al compartirla: sale con imagen, color y el logo de LiloSafio."
+      ]
+    },
     {
       "version": "0.2.5",
       "title": "Un solo archivo y ya funciona",

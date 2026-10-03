@@ -8,6 +8,35 @@
 <meta name="theme-color" content="#0b0b0d">
 <link rel="icon" href="assets/logo_small.png">
 <link rel="stylesheet" href="assets/site.css">
+
+<!-- Open Graph: es lo que hace que al pegar el enlace en un chat de Discord
+     salga una tarjeta con la imagen, el titulo y el color de la marca. Sin
+     esto Discord se inventa el titulo con el texto del <title> y enseña un
+     rectangulo gris sin imagen.
+
+     El `og:image` tiene que ser una URL COMPLETA, no `assets/og.jpg`: Discord
+     no sabe donde esta la pagina, solo sabe de donde la ha descargado. Si se
+     pone relativa, no hay imagen y se pierde media tarjeta. Y si esa imagen no
+     existe, el enlace se comparte igual pero sin nada que enseñar.
+
+     La imagen la genera `tools\generate_og.py` (1200x630, lo que pide Discord). -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LiloSafio">
+<meta property="og:url" content="https://lilosafio.pages.dev/">
+<meta property="og:title" content="LiloSafio · Descargar el launcher">
+<meta property="og:description" content="Tu servidor de Minecraft en un solo archivo. Descargalo, doble clic y a jugar: sin descomprimir nada ni decidir que archivo es el bueno.">
+<meta property="og:image" content="https://lilosafio.pages.dev/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LiloSafio · Tu servidor de Minecraft, en un solo archivo">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter/X usa su propia tarjeta. Sin esto se veria una vista previa en
+     blanco. Se declara porque a veces el enlace se comparte por ahi. -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LiloSafio · Descargar el launcher">
+<meta name="twitter:description" content="Tu servidor de Minecraft en un solo archivo. Descargalo, doble clic y a jugar.">
+<meta name="twitter:image" content="https://lilosafio.pages.dev/assets/og.jpg">
 </head>
 <body>
 

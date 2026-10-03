@@ -15,9 +15,9 @@
   "_DESCARGA": "El instalador se copia dentro de la propia web, en site\\descargas\\, y el boton es un enlace normal. Asi que no hay nada externo: subes la carpeta site\\ y ya. No hace falta GitHub ni ningun hosting aparte.",
 
   "descargas": {
-    "carpeta": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.7",
+    "carpeta": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.8",
     "exe": "LiloSafioInstalador.exe",
-    "zip": "LiloSafio-0.2.7-win-x64.zip"
+    "zip": "LiloSafio-0.2.8-win-x64.zip"
   },
 
   "_SERVIDOR": "La API de Discord no deja llamarla desde el navegador (no manda cabeceras CORS). Con «api» puesta, el sitio usa el Worker de site\\worker\\discord-count.js, que es estable y gratis; mientras este vacio, usa proxies publicos que fallan de vez en cuando. Para montarlo: Workers & Pages > Create > Worker, pegar el archivo y deployar. Luego escribir aqui su direccion y relanzar el build.",

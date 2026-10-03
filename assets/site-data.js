@@ -4,7 +4,7 @@ window.LILO_DATA = {
   "generado": "2026-10-03",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.2.7",
+    "version": "0.2.8",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -19,18 +19,18 @@ window.LILO_DATA = {
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
       "mb": 583.1,
-      "sha256": "ce0bb6e44b0162e372564388154bc83a0c3974d2c97bfac5e7986c119ba57848",
+      "sha256": "322bf64f08ecb621741056f0336250b53dc6b6798b3815a921988a532abdabee",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.7/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.8/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.2.7-win-x64.zip",
+      "archivo": "LiloSafio-0.2.8-win-x64.zip",
       "mb": 574.8,
-      "sha256": "eb84aa1969f7916ad2ec0f58e294470d1c12b63b675320edf1de3e501fc76dab",
+      "sha256": "eeaccc9aa4b6b7ca1e62ed760eec710aa45ce2ccaf68915c8420be0df6639bc2",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.7/LiloSafio-0.2.7-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.8/LiloSafio-0.2.8-win-x64.zip"
     }
   },
   "requisitos": [
@@ -54,13 +54,26 @@ window.LILO_DATA = {
   "servidor": {
     "ok": true,
     "miembros": 9,
-    "en_linea": 3,
+    "en_linea": 5,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "api": "",
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.2.8",
+      "title": "Los mods llegan a su sitio y se ve el instalador",
+      "changes": [
+        "Arreglado «faltan los archivos .jar»: el modpack se descomprimia con una carpeta de más y Minecraft no encontraba ningún mod.",
+        "Los 63 .jar ya están dentro de mods/ y las configuraciones dentro de config/.",
+        "Si ya tenias el juego instalado con el fallo, se arregla solo: los recoge de la carpeta.",
+        "El aviso ya no dice «solo trae la configuración», que mandaba a CurseForge a buscar 63 archivos que ya estaban en el disco.",
+        "Arreglado «necesita Java 21»: ahora se busca tambien donde Oracle lo instala de verdad y en el registro de Windows.",
+        "Si el launcher ve que la instalación no sirve, abre el instalador en vez de una pantalla de avisos sin salida.",
+        "Fuera el cartel de «esto tarda 20 segundos»: era un aviso de copia de archivos que sonaba a fallo."
+      ]
+    },
     {
       "version": "0.2.7",
       "title": "Las descargas se comprueban y se ven",

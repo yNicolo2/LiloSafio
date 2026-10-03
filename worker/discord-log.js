@@ -72,12 +72,80 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
+    // `/estado` es como se comprueba que el Worker esta bien puesto SIN instalar
+    // nada: se abre en el navegador y tiene que decir que le falta o que ya esta.
+    //
+    // Antes devolvia un JSON con `ok: true` siempre, y por eso no servia para
+    // nada: si faltaba un secreto decia «todo bien» igual. Ahora comprueba de
+    // verdad las TRES cosas que hacen falta —los secretos puestos, que el token
+    // sirve en Discord, y que el bot puede leer el canal— y dice cual falla.
     if (request.method === "GET" && url.pathname === "/estado") {
-      return json({
-        ok: true,
-        configurado: Boolean(env.DISCORD_BOT_TOKEN && env.DISCORD_CHANNEL_ID),
-        conRol: Boolean(env.DISCORD_ROLE_ID),
-      });
+      const faltan = [];
+      if (!env.DISCORD_BOT_TOKEN) faltan.push("DISCORD_BOT_TOKEN");
+      if (!env.DISCORD_GUILD_ID) faltan.push("DISCORD_GUILD_ID");
+      if (!env.DISCORD_CHANNEL_ID) faltan.push("DISCORD_CHANNEL_ID");
+
+      if (faltan.length) {
+        return new Response(
+          "FALTA EN EL WORKER:\n  - " +
+            faltan.join("\n  - ") +
+            "\n\nSettings -> Variables and Secrets -> anadelas -> Save and Deploy.\n",
+          { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8" } }
+        );
+      }
+
+      // Los secretos estan puestos. Falta lo de verdad: que el token sirva y que
+      // el bot vea el canal. Sin esto, el error sale cuando alguien entra al
+      // juego y no aparece nada, que es justo cuando mas cuesta entenderlo.
+      let tokenOk = false;
+      let canalOk = false;
+      let detalle = "";
+      try {
+        const r = await fetch("https://discord.com/api/v10/users/@me", {
+          headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}` },
+          signal: AbortSignal.timeout ? AbortSignal.timeout(TIMEOUT_MS) : undefined,
+        });
+        tokenOk = r.ok;
+        if (!r.ok) detalle = (await r.text().catch(() => "")).slice(0, 120);
+      } catch (e) {
+        detalle = String((e && e.message) || e);
+      }
+      try {
+        const r = await fetch(
+          `https://discord.com/api/v10/channels/${env.DISCORD_CHANNEL_ID}`,
+          {
+            headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}` },
+            signal: AbortSignal.timeout ? AbortSignal.timeout(TIMEOUT_MS) : undefined,
+          }
+        );
+        canalOk = r.ok;
+        if (!r.ok && !detalle) {
+          detalle = `canal: ${(await r.text().catch(() => "")).slice(0, 120)}`;
+        }
+      } catch (e) {
+        if (!detalle) detalle = String((e && e.message) || e);
+      }
+
+      const listo = tokenOk && canalOk;
+      return new Response(
+        [
+          tokenOk
+            ? "  token   OK  (el bot se identifica en Discord)"
+            : "  token   MAL " + detalle,
+          canalOk
+            ? "  canal   OK  (el bot ve el canal)"
+            : "  canal   MAL (no existe ese canal, o al bot le falta verlo)",
+          "",
+          listo
+            ? "LISTO. Las entradas y salidas se avisaran."
+            : "Arregla lo de arriba antes de probar el launcher.",
+          "",
+        ].join("\n"),
+        {
+          status: listo ? 200 : 503,
+          headers: { "Content-Type": "text/plain; charset=utf-8" },
+        }
+      );
     }
 
     if (request.method !== "POST") {

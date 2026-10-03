@@ -2,7 +2,7 @@
   "generado": "2026-10-03",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -17,18 +17,18 @@
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
       "mb": 583.1,
-      "sha256": "b7ad3eff7276776c5d61d4fcf855577bb4cbc8838aaab7ffa7750e9805bb9919",
+      "sha256": "ffdc8d837cc33886ad88a975817a370cfe50cfe9eea5f067fb395f8f8771c743",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.1/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.2/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.3.1-win-x64.zip",
+      "archivo": "LiloSafio-0.3.2-win-x64.zip",
       "mb": 574.8,
-      "sha256": "662216f9c5fef5fced7d1c20c98d6714150402b68a6efa7a6beefbc92dfaae9d",
+      "sha256": "1aef3282360e5ccc38bfd834198e39ce61df1ad93f05f76632e83943269c7134",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.1/LiloSafio-0.3.1-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.2/LiloSafio-0.3.2-win-x64.zip"
     }
   },
   "requisitos": [
@@ -52,13 +52,27 @@
   "servidor": {
     "ok": true,
     "miembros": 8,
-    "en_linea": 4,
+    "en_linea": 6,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "api": "",
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.3.2",
+      "title": "Los avisos ya tienen destino, y el launcher se mueve mejor",
+      "changes": [
+        "Arreglado «entra al juego y no aparece nada en el canal»: no habia destino de avisos puesto.",
+        "El reloj del launcher iba con 15 s de retraso: se veia la hora anterior al cambiar de minuto.",
+        "Al cambiar de pantalla, la animacion va ahora en el sentido del cambio y dura menos.",
+        "Respetado «reducir el movimiento» de Windows, que antes se ignoraba por completo.",
+        "Los avisos se mandan en orden: «ha salido» ya no puede llegar antes que «ha entrado».",
+        "Cuando los avisos estan desactivados, el registro lo dice en claro en vez de fallar en silencio.",
+        "Un rechazo del Worker (403) ahora explica si el usuario no esta en el servidor o falta el Server Members Intent.",
+        "La pagina /estado del Worker dice si falta algun secreto y comprueba que el token sirve de verdad."
+      ]
+    },
     {
       "version": "0.3.1",
       "title": "El bot de Discord, en condiciones de estar encendido",

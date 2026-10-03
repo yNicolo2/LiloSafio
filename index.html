@@ -138,6 +138,20 @@
     <div class="notas" data-notas></div>
   </section>
 
+  <!-- Historial de lo YA PUBLICADO, con la huella de cada instalador. Sale de
+       la API de GitHub al generar la web, no está escrito a mano: lo que sale
+       aquí es exactamente lo que hay para bajarse, con su SHA-256 para
+       comprobarlo. Es el sitio donde se puede responder "¿esto es de verdad?"
+       con algo mejor que una promesa. -->
+  <section class="seccion" id="versiones" data-revelar>
+    <h2 class="titulo">Versiones publicadas</h2>
+    <p class="bajada">
+      Cada instalador con su huella SHA-256. Si te has bajado el archivo y la
+      huella no sale <em>esta</em>, no lo ejecutes.
+    </p>
+    <div class="versiones" data-versiones hidden></div>
+  </section>
+
   <section class="seccion" id="capturas" data-revelar>
     <h2 class="titulo">Cómo se ve</h2>
     <p class="bajada">Esto es lo que te va a aparecer al abrir el launcher.</p>

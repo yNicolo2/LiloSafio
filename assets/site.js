@@ -295,7 +295,40 @@
       return;
     }
 
-    var destino =
+    // El Worker propio va PRIMERO y los proxies publicos quedan como ultimo
+    // recurso. El Worker es estable y gratis; los proxies son lo que hacia que
+    // este contador fallara. Si el Worker no esta desplegado todavia, la web
+    // sigue funcionando igual: por eso esto es un intento mas y no un cambio
+    // que rompa si falta.
+    if (s.api) {
+      fetch(s.api + "/" + encodeURIComponent(s.invitacion), { cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("worker " + r.status);
+          return r.json();
+        })
+        .then(function (d) {
+          if (!d || !d.ok) throw new Error("sin datos");
+          // El Worker devuelve `online`, no `approximate_presence_count`. Se
+          // acepta que venga a null: entonces no se pinta ningun numero en
+          // vez de inventar un cero.
+          var fresco = {
+            en_linea: d.online,
+            miembros: d.miembros,
+            nombre: d.nombre || s.nombre,
+            de_cache: !!(d.__cache),
+          };
+          aplicarServidor(fresco);
+          guardarCache(fresco);
+        })
+        .catch(function () {
+          proxies(); // el Worker no esta: se siguen probando los proxies
+        });
+      return;
+    }
+    proxies();
+
+    function proxies() {
+      var destino =
       "https://discord.com/api/v10/invites/" +
       encodeURIComponent(s.invitacion) +
       "?with_counts=true";
@@ -343,9 +376,98 @@
         .then(function () {
           clearTimeout(reloj);
         });
-    }
+      }
 
-    intentar();
+      intentar();
+    }
+  }
+
+  /* ---------- versiones publicadas ---------- */
+  // Copia un texto y lo acusa en el propio boton. Usa `navigator.clipboard`,
+  // que solo funciona en https o localhost (la web esta en https, asi que
+  // bien) y con un recurso mas: si el navegador lo rechaza se recurre al
+  // portapapeles antiguo, para que el boton no se quede muerto sin avisar.
+  function copiar(texto, boton) {
+    var original = boton.textContent;
+    var avisar = function (ok) {
+      boton.textContent = ok ? "¡Copiado!" : "No se pudo copiar";
+      setTimeout(function () { boton.textContent = original; }, 1600);
+    };
+    var antiguo = function () {
+      try {
+        var campo = document.createElement("textarea");
+        campo.value = texto;
+        campo.setAttribute("readonly", "");
+        campo.style.position = "fixed";
+        campo.style.opacity = "0";
+        document.body.appendChild(campo);
+        campo.select();
+        var ok = document.execCommand("copy");
+        document.body.removeChild(campo);
+        avisar(ok);
+      } catch (error) {
+        avisar(false);
+      }
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(texto).then(function () { avisar(true); }, antiguo);
+    } else {
+      antiguo();
+    }
+  }
+
+  // La tabla sale de `D.versiones`, que el generador llena con la API de
+  // GitHub. Si no hay releases (repo nuevo, sin red al generar), no se pinta
+  // nada: es preferible que falte la tabla a que haya filas sin descargar.
+  function pintarVersiones() {
+    var caja = document.querySelector("[data-versiones]");
+    if (!caja || !D || !D.versiones || !D.versiones.length) return;
+
+    var lista = el("div", "versiones__lista");
+    D.versiones.forEach(function (v, indice) {
+      var fila = el("div", "version");
+      if (indice === 0) fila.classList.add("is-actual");
+
+      var izq = el("div", "version__datos");
+      var linea = el("div", "version__linea");
+      linea.appendChild(el("b", "version__num", "v" + v.version));
+      if (indice === 0) linea.appendChild(el("span", "version__tag", "actual"));
+      izq.appendChild(linea);
+
+      var meta = [];
+      if (v.mb) meta.push(v.mb + " MB");
+      if (v.fecha) meta.push(v.fecha);
+      if (meta.length) izq.appendChild(el("small", "version__meta", meta.join(" · ")));
+
+      // La huella va completa y pulsable para copiar: es para comparar, no para
+      // leerla a ojo. Si la release no trajo `checksums.txt`, se dice en claro
+      // en vez de enseñar un hueco que parece un fallo.
+      if (v.sha256) {
+        var hash = el("button", "version__hash", v.sha256);
+        hash.type = "button";
+        hash.title = "Copiar la huella";
+        // Acuse en el propio boton en vez de un aviso flotante: la web no
+        // tiene sistema de avisos, y montar uno solo para esto seria mas codigo
+        // que la propia tabla.
+        hash.addEventListener("click", function () {
+          copiar(v.sha256, hash);
+        });
+        izq.appendChild(hash);
+      } else {
+        izq.appendChild(el("small", "version__sinh", "sin huella publicada"));
+      }
+
+      fila.appendChild(izq);
+      if (v.url) {
+        var descarga = el("a", "boton secundario pequeno version__descarga", "Descargar");
+        descarga.href = v.url;
+        descarga.rel = "noopener";
+        fila.appendChild(descarga);
+      }
+      lista.appendChild(fila);
+    });
+    caja.appendChild(lista);
+    caja.hidden = false;
   }
 
   function arrancar() {
@@ -354,6 +476,7 @@
     pintarPropietario();
     pintarDescargas();
     pintarNotas();
+    pintarVersiones();
     pintarServidor();
     refrescarServidor();
     activarRevelado();

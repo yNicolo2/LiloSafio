@@ -264,6 +264,63 @@ h1 .destacado {
 .nota-descarga { margin-top: 14px; font-size: .88rem; color: var(--text-muted); }
 .nota-descarga a { color: var(--text-dim); }
 
+/* ---------- versiones publicadas ---------- */
+.versiones { margin-top: 26px; }
+.versiones__lista {
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.version {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 18px;
+  background: var(--surface);
+}
+/* Separador sin borde en el ultimo: el contenedor ya trae el suyo, y dos bordes
+   juntos dejan una linea mas gruesa de lo que toca. */
+.version + .version { border-top: 1px solid var(--border-soft); }
+.version.is-actual { background: var(--surface-2); }
+.version__datos { min-width: 0; flex: 1; }
+.version__linea { display: flex; align-items: center; gap: 10px; }
+.version__num { font-size: .98rem; }
+.version__tag {
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+.version__meta { display: block; color: var(--text-dim); font-size: .8rem; margin-top: 3px; }
+/* La huella se ensancha para que se lea entera. Va pulsable para copiarla, y
+   es lo unico de la pagina con este tipo de letra: tiene que distinguirse a
+   simple vista de un texto normal. */
+.version__hash {
+  display: block;
+  margin-top: 8px;
+  max-width: 100%;
+  padding: 6px 10px;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: .72rem;
+  color: var(--text-muted);
+  background: var(--surface-3);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  cursor: copy;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.version__hash:hover { color: var(--text); border-color: var(--border); }
+.version__sinh { display: block; margin-top: 8px; font-size: .78rem; color: var(--text-dim); font-style: italic; }
+.version__descarga { flex: none; text-decoration: none; white-space: nowrap; }
+@media (max-width: 620px) {
+  .version { flex-direction: column; align-items: stretch; gap: 12px; }
+  .version__descarga { text-align: center; }
+}
+
 /* ---------- secciones ---------- */
 .seccion { padding: 56px 20px; }
 .seccion + .seccion { border-top: 1px solid var(--border-soft); }

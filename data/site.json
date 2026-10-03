@@ -1,8 +1,8 @@
 {
-  "generado": "2026-10-02",
+  "generado": "2026-10-03",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -17,18 +17,18 @@
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
       "mb": 583.1,
-      "sha256": "3db4c43af450ae6a8509d38b3c5ce16d6e47e720039fd63b0765bfc03a75b4ae",
+      "sha256": "ce0bb6e44b0162e372564388154bc83a0c3974d2c97bfac5e7986c119ba57848",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.6/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.7/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.2.6-win-x64.zip",
+      "archivo": "LiloSafio-0.2.7-win-x64.zip",
       "mb": 574.8,
-      "sha256": "b8f1a1cb22d4383b91c72bc0885a243a4531fbca78193abaa539cbbd9cd483e3",
+      "sha256": "eb84aa1969f7916ad2ec0f58e294470d1c12b63b675320edf1de3e501fc76dab",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.6/LiloSafio-0.2.6-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.7/LiloSafio-0.2.7-win-x64.zip"
     }
   },
   "requisitos": [
@@ -52,12 +52,25 @@
   "servidor": {
     "ok": true,
     "miembros": 9,
-    "en_linea": 4,
+    "en_linea": 3,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
+    "api": "",
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.2.7",
+      "title": "Las descargas se comprueban y se ven",
+      "changes": [
+        "Arreglado el boton «Sitio web»: se veia bien y no hacia nada.",
+        "Ahora se comprueba la huella SHA-256 de lo descargado antes de instalar nada.",
+        "Cada release lleva su checksums.txt, y si no coincide, no se instala.",
+        "La descarga enseña los MB que llevas, a que velocidad y cuanto queda.",
+        "Nuevo boton «Sitio web» en el riel, junto al de unirse al servidor.",
+        "La web tiene una tabla de versiones con la huella de cada instalador."
+      ]
+    },
     {
       "version": "0.2.6",
       "title": "Las actualizaciones ya funcionan de verdad",
@@ -261,6 +274,24 @@
         "Botones de Discord para entrar al servidor de LiloSafio.",
         "Assets generados por codigo y empaquetado con PyInstaller."
       ]
+    }
+  ],
+  "versiones": [
+    {
+      "version": "0.2.6",
+      "titulo": "LiloSafio 0.2.6",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.6/LiloSafioInstalador.exe",
+      "sha256": ""
+    },
+    {
+      "version": "0.2.5",
+      "titulo": "LiloSafioLauncher",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.5/LiloSafioInstalador.exe",
+      "sha256": ""
     }
   ],
   "legal": {

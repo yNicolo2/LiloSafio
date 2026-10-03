@@ -58,7 +58,50 @@ es una petición HTTP, así que no cabe ahí. Por eso los avisos de quién entra
 manda un Worker (`site/worker/discord-log.js`, que solo hace POST a Discord) y
 este bot lleva las reglas y los sorteos.
 
-### La opción: un servidor propio, gratis y siempre encendido
+### La opción rápida: hosting de bots, sin tarjeta
+
+Si lo de Oracle te parece demasiado trámite, hay sitios de hosting **solo para
+bots de Discord** que no piden tarjeta y no duermen el proceso:
+
+| Sitio | Tarjeta | Límite |
+|---|---|---|
+| [quaxly.com](https://quaxly.com) | No | 3 bots, 512 MB |
+| [deplexo.com](https://deplexo.com) | No | 128 MB |
+
+Los dos auto-detectan Node.js y discord.js. Se sube el código, se pega el token
+como variable de entorno y el bot está online en menos de un minuto.
+
+**El bot ya está empaquetado y listo para subir:**
+
+👉 <https://lilosafio.pages.dev/bot/lilosafio-bot.zip>
+
+1. Entra en <https://quaxly.com> y dale a *Start free* (sin tarjeta).
+2. Sube ese `.zip`.
+3. Añade las variables de entorno que van dentro del archivo, en un
+   `LEEME-ESTO.txt` que explica una a una.
+4. Deploy.
+
+### Sobre el token en un hosting de terceros
+
+Sé que da cosa dar el token a un sitio que no eres tú, así que aquí va claro qué
+pueden y qué no:
+
+- **Un token de bot NO es tu cuenta de Discord.** No pueden leer tus mensajes
+  privados, ni tu correo, ni entrar en tu cuenta. El token solo deja actuar
+  **como el bot**, y solo en los servidores donde el bot esté.
+- Como tu bot apenas tiene permisos (ver el canal, mandar mensajes, embeds), lo
+  único que podría hacer un dueño descuidado es mandar mensajes como LiloSafio.
+- **Y se corta en un segundo**: si algún día te fías menos, haces *Reset Token* en
+  Discord y el token que ellos tienen deja de servir al instante.
+
+O sea: hay riesgo, pero es acotado y es reversible. Si prefieres cero riesgo,
+la opción del servidor propio de abajo lo tiene.
+
+### La opción sin tarjeta y con el token solo tuyo
+
+El nivel gratuito de **Oracle Cloud** da 2 OCPU y 12 GB, gratis para siempre y
+sin apagarse. Pide tarjeta al registrarse, pero no cobra nada.
+
 
 El nivel gratuito de **Oracle Cloud** da 2 OCPU y 12 GB de RAM, gratis para
 siempre, sin apagado y sin tarjeta después de registrarse. Es un VPS normal, así

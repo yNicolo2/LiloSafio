@@ -1,3 +1,4 @@
 # Los binarios NO van al repo: son mas de 1 GB y van en una Release de GitHub.
 # Ademas, GitHub Pages no publica un sitio de mas de 1 GB.
 descargas/
+_subir.ps1

@@ -1,1 +1,0 @@
-﻿$env:Path = 'C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI;' + $env:Path; Set-Location 'C:\Users\USUARIO\Documents\Py\LiloSafio Launcher\site'; & 'C:\Program Files\GitHub CLI\gh.exe' release upload 0.2.5 '..\dist\LiloSafio-0.2.5-win-x64.zip'; Write-Output ('UP_EXIT=' + $LASTEXITCODE)

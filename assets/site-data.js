@@ -4,7 +4,7 @@ window.LILO_DATA = {
   "generado": "2026-10-03",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -19,18 +19,18 @@ window.LILO_DATA = {
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
       "mb": 583.1,
-      "sha256": "ffdc8d837cc33886ad88a975817a370cfe50cfe9eea5f067fb395f8f8771c743",
+      "sha256": "d4aea8adb5c403684edab0154edb4ed7339a8e7efc8c06e5160f7a48e0497970",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.2/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.3/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.3.2-win-x64.zip",
+      "archivo": "LiloSafio-0.3.3-win-x64.zip",
       "mb": 574.8,
-      "sha256": "1aef3282360e5ccc38bfd834198e39ce61df1ad93f05f76632e83943269c7134",
+      "sha256": "a363e671220b388083db9b7388e8aa767933caa66c9bf4bf02dfbed261249608",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.2/LiloSafio-0.3.2-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.3/LiloSafio-0.3.3-win-x64.zip"
     }
   },
   "requisitos": [
@@ -54,13 +54,26 @@ window.LILO_DATA = {
   "servidor": {
     "ok": true,
     "miembros": 8,
-    "en_linea": 6,
+    "en_linea": 5,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "api": "",
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.3.3",
+      "title": "Ya se sabe quien salio, y las descargas se reanudan solas",
+      "changes": [
+        "Arreglado «nunca sale quien ha salido»: el aviso se perdia al cerrar el launcher.",
+        "Al cerrar el launcher ahora se espera a que el aviso salga de verdad, con un tope de 3 s.",
+        "Minecraft se comprueba cinco veces mas a menudo, para no perder ese aviso por el camino.",
+        "El actualizador reintenta solo si se corta la conexion, hasta tres veces.",
+        "La descarga se reanuda por donde se quedo, en vez de empezar de cero.",
+        "Arreglado un fallo grave: una descarga cortada se daba por buena y se instalaba un .exe a medias.",
+        "La descarga dice cuantos MB lleva, a que velocidad y cuanto queda, no solo el porcentaje."
+      ]
+    },
     {
       "version": "0.3.2",
       "title": "Los avisos ya tienen destino, y el launcher se mueve mejor",
@@ -343,6 +356,14 @@ window.LILO_DATA = {
     }
   ],
   "versiones": [
+    {
+      "version": "0.3.2",
+      "titulo": "LiloSafio 0.3.2 · Los avisos ya tienen destino",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.2/LiloSafioInstalador.exe",
+      "sha256": "ffdc8d837cc33886ad88a975817a370cfe50cfe9eea5f067fb395f8f8771c743"
+    },
     {
       "version": "0.3.1",
       "titulo": "LiloSafio 0.3.1",

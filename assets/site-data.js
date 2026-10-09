@@ -369,6 +369,14 @@ window.LILO_DATA = {
   ],
   "versiones": [
     {
+      "version": "0.3.4",
+      "titulo": "0.3.4 - sonidos, Java 21 y avisos",
+      "fecha": "2026-10-09",
+      "mb": 424.9,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.4/LiloSafioInstalador.exe",
+      "sha256": "7211bebb0783469347f1c78c6eac005e92b13e6900261dbdfee06d5c77f33185"
+    },
+    {
       "version": "0.3.3",
       "titulo": "LiloSafio 0.3.3 · Ya se sabe quien salio",
       "fecha": "2026-10-04",

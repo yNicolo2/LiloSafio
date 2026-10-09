@@ -1,10 +1,10 @@
 // Generado por tools\build_site.py. NO editar a mano:
 // se rehace en cada build desde config.py y changelog.py.
 window.LILO_DATA = {
-  "generado": "2026-10-03",
+  "generado": "2026-10-09",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -18,19 +18,19 @@ window.LILO_DATA = {
   "descargas": {
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
-      "mb": 583.1,
-      "sha256": "d4aea8adb5c403684edab0154edb4ed7339a8e7efc8c06e5160f7a48e0497970",
+      "mb": 424.9,
+      "sha256": "7211bebb0783469347f1c78c6eac005e92b13e6900261dbdfee06d5c77f33185",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.3/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.4/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.3.3-win-x64.zip",
-      "mb": 574.8,
-      "sha256": "a363e671220b388083db9b7388e8aa767933caa66c9bf4bf02dfbed261249608",
+      "archivo": "LiloSafio-0.3.4-win-x64.zip",
+      "mb": 416.6,
+      "sha256": "33565bc1700fe83c3a4e887f01b934002f4ad9391adc63ee12d0e9d293a320db",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.3/LiloSafio-0.3.3-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.4/LiloSafio-0.3.4-win-x64.zip"
     }
   },
   "requisitos": [
@@ -53,14 +53,26 @@ window.LILO_DATA = {
   ],
   "servidor": {
     "ok": true,
-    "miembros": 8,
-    "en_linea": 5,
+    "miembros": 11,
+    "en_linea": 7,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "api": "",
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.3.4",
+      "title": "Java 21 incluido, sonido de vuelta y sin aviso fantasma",
+      "changes": [
+        "Java 21 integrado: si no tienes ninguno, el launcher baja el suyo solo (~190 MB, una vez).",
+        "Arreglado «no hay sonido»: la direccion de los sonidos estaba mal y no se bajaba ni uno.",
+        "Si los sonidos no se pueden bajar, Jugar lo dice en vez de arrancar mudo en silencio.",
+        "Quitado el aviso «faltan los archivos .jar» en instalaciones nuevas: solo sale si de verdad faltan.",
+        "El aviso cuenta los 83 mods que trae el zip, no el «1» que dice el manifiesto.",
+        "Se detecta la carpeta de mas aunque se llame «Milongsafio (1)»: se recoge sola."
+      ]
+    },
     {
       "version": "0.3.3",
       "title": "Ya se sabe quien salio, y las descargas se reanudan solas",
@@ -356,6 +368,14 @@ window.LILO_DATA = {
     }
   ],
   "versiones": [
+    {
+      "version": "0.3.3",
+      "titulo": "LiloSafio 0.3.3 · Ya se sabe quien salio",
+      "fecha": "2026-10-04",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.3/LiloSafioInstalador.exe",
+      "sha256": "d4aea8adb5c403684edab0154edb4ed7339a8e7efc8c06e5160f7a48e0497970"
+    },
     {
       "version": "0.3.2",
       "titulo": "LiloSafio 0.3.2 · Los avisos ya tienen destino",

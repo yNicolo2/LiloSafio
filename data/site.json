@@ -1,8 +1,8 @@
 {
-  "generado": "2026-10-09",
+  "generado": "2026-10-11",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -20,15 +20,15 @@
       "sha256": "7211bebb0783469347f1c78c6eac005e92b13e6900261dbdfee06d5c77f33185",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.4/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.5/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.3.4-win-x64.zip",
-      "mb": 416.6,
-      "sha256": "33565bc1700fe83c3a4e887f01b934002f4ad9391adc63ee12d0e9d293a320db",
+      "archivo": "LiloSafio-0.3.5-win-x64.zip",
+      "mb": null,
+      "sha256": "",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.4/LiloSafio-0.3.4-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.5/LiloSafio-0.3.5-win-x64.zip"
     }
   },
   "requisitos": [
@@ -51,7 +51,7 @@
   ],
   "servidor": {
     "ok": true,
-    "miembros": 11,
+    "miembros": 13,
     "en_linea": 7,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
@@ -59,6 +59,15 @@
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.3.5",
+      "title": "Los sonidos y los idiomas que faltan se completan solos",
+      "changes": [
+        "Si el juego quedo instalado sin sonidos (las versiones rotas), Jugar los baja solos al arrancar.",
+        "Solo se baja lo que falta: lo que ya esta no se repite.",
+        "Si no se pueden bajar, el launcher lo dice en vez de arrancar mudo en silencio."
+      ]
+    },
     {
       "version": "0.3.4",
       "title": "Java 21 incluido, sonido de vuelta y sin aviso fantasma",

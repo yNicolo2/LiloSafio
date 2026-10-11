@@ -19,15 +19,15 @@ window.LILO_DATA = {
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
       "mb": 424.9,
-      "sha256": "7211bebb0783469347f1c78c6eac005e92b13e6900261dbdfee06d5c77f33185",
+      "sha256": "72e600eb904c46d70aeace08519e07b96744ed415503fa32e62d66e50e3d7416",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
       "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.5/LiloSafioInstalador.exe"
     },
     "respaldo": {
       "archivo": "LiloSafio-0.3.5-win-x64.zip",
-      "mb": null,
-      "sha256": "",
+      "mb": 416.6,
+      "sha256": "27f9bd18f4338898255d9930f3d9d9bfbf016e27b511f39b28379401de44e869",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
       "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.5/LiloSafio-0.3.5-win-x64.zip"
@@ -378,6 +378,14 @@ window.LILO_DATA = {
   ],
   "versiones": [
     {
+      "version": "0.3.5",
+      "titulo": "0.3.5 - los sonidos que faltan se completan solos",
+      "fecha": "2026-10-11",
+      "mb": 424.9,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.5/LiloSafioInstalador.exe",
+      "sha256": "72e600eb904c46d70aeace08519e07b96744ed415503fa32e62d66e50e3d7416"
+    },
+    {
       "version": "0.3.4",
       "titulo": "0.3.4 - sonidos, Java 21 y avisos",
       "fecha": "2026-10-09",
@@ -447,14 +455,6 @@ window.LILO_DATA = {
       "fecha": "2026-10-03",
       "mb": 583.1,
       "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.6/LiloSafioInstalador.exe",
-      "sha256": ""
-    },
-    {
-      "version": "0.2.5",
-      "titulo": "LiloSafioLauncher",
-      "fecha": "2026-10-03",
-      "mb": 583.1,
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.5/LiloSafioInstalador.exe",
       "sha256": ""
     }
   ],

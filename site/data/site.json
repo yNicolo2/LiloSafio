@@ -2,33 +2,33 @@
   "generado": "2026-10-21",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.3.6",
+    "version": "0.3.7",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
   "owner": {
     "nombre": "yNicolo",
     "rol": "Owner de LiloSafio",
-    "pais": "España",
+    "pais": "EspaÃ±a",
     "piel": "assets/cabeza-yNicolo.png",
     "discord": "https://discord.gg/wD5WvdSYgG"
   },
   "descargas": {
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
-      "mb": 425.1,
-      "sha256": "d5a4daa47d8e35025dd37f79c29c08d582121472ac526f7bcdfdba62a7f0c022",
+      "mb": 425.2,
+      "sha256": "2ee65f37a0b5fb1e1dc7e63dea4c3ba6066eaa95c97006c7fc4bafd0b9fe5edc",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.6/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.7/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.3.6-win-x64.zip",
+      "archivo": "LiloSafio-0.3.7-win-x64.zip",
       "mb": 416.9,
-      "sha256": "5f428d7f737c400960cad27d88892eb4f92c656ccea8bd55c7ebbcdc08ad96ba",
+      "sha256": "21ea6dfa9f016662e08d2e1092fa27420a96f834639fa8cbb87ff438881456dd",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.6/LiloSafio-0.3.6-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.7/LiloSafio-0.3.7-win-x64.zip"
     }
   },
   "requisitos": [
@@ -59,6 +59,17 @@
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/ccab664094c6b939f122cdc03f686eb3.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.3.7",
+      "title": "El juego se instala mucho mas rapido",
+      "changes": [
+        "Las descargas ya no abren una conexion nueva por archivo: se reutiliza la misma. Antes eso costaba ~250 ms por archivo.",
+        "Los sonidos y las texturas se bajan en 24 descargas a la vez: de unos 7 minutos a menos de 2.",
+        "Si un archivo se baja a medias, se reintenta solo y no se dana por bueno.",
+        "Cada archivo se comprueba con SHA-1 y solo se sustituye cuando esta bien.",
+        "Cancelar la descarga no deja archivos a medias."
+      ]
+    },
     {
       "version": "0.3.6",
       "title": "Descarga de sonidos y texturas 100 veces mas rapida",

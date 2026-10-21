@@ -1,7 +1,7 @@
 // Generado por tools\build_site.py. NO editar a mano:
 // se rehace en cada build desde config.py y changelog.py.
 window.LILO_DATA = {
-  "generado": "2026-10-20",
+  "generado": "2026-10-21",
   "app": {
     "nombre": "LiloSafio",
     "version": "0.3.6",
@@ -54,21 +54,13 @@ window.LILO_DATA = {
   "servidor": {
     "ok": true,
     "miembros": 13,
-    "en_linea": 4,
+    "en_linea": 6,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "api": "",
     "icono": "https://cdn.discordapp.com/icons/1554564740985000007/ccab664094c6b939f122cdc03f686eb3.png?size=128"
   },
   "changelog": [
-    {
-      "version": "0.3.7",
-      "title": "Parche de velocidad de descarga de assets",
-      "changes": [
-        "Descarga agrupada en assets.tar.gz con rangos HTTP y 4 peticiones paralelas: de ~2 horas a minutos.",
-        "SHA-1 verificado por archivo al extraer; solo se bajan los que faltan."
-      ]
-    },
     {
       "version": "0.3.6",
       "title": "Descarga de sonidos y texturas 100 veces mas rapida",
@@ -395,6 +387,14 @@ window.LILO_DATA = {
   ],
   "versiones": [
     {
+      "version": "0.3.6",
+      "titulo": "LiloSafio 0.3.6",
+      "fecha": "2026-10-21",
+      "mb": 425.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.6/LiloSafioInstalador.exe",
+      "sha256": "d5a4daa47d8e35025dd37f79c29c08d582121472ac526f7bcdfdba62a7f0c022"
+    },
+    {
       "version": "0.3.5",
       "titulo": "0.3.5 - los sonidos que faltan se completan solos",
       "fecha": "2026-10-11",
@@ -465,14 +465,6 @@ window.LILO_DATA = {
       "mb": 583.1,
       "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.7/LiloSafioInstalador.exe",
       "sha256": "ce0bb6e44b0162e372564388154bc83a0c3974d2c97bfac5e7986c119ba57848"
-    },
-    {
-      "version": "0.2.6",
-      "titulo": "LiloSafio 0.2.6",
-      "fecha": "2026-10-03",
-      "mb": 583.1,
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.6/LiloSafioInstalador.exe",
-      "sha256": ""
     }
   ],
   "legal": {

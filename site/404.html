@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- Esto es lo que Pages enseña cuando alguien escribe una URL que no existe
+     (`/descarga`, `/LiloSafio.exe`...). Sin esto sale el error feo de Cloudflare,
+     que en una web "oficial" canta mucho. Lo que hay aqui es solo una vuelta
+     a la portada: no se redirecciona con HTTP porque 404 no puede llevarlo a
+     la portada, y asi el boton de atras sigue funcionando como debe. -->
+<html lang="es" class="sin-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Esta pagina no existe · LiloSafio</title>
+  <meta name="description" content="La direccion no existe. Vuelve a la portada de LiloSafio.">
+  <link rel="icon" href="assets/logo_small.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="marca" href="./">
+      <img class="marca-logo" src="assets/logo_small.png" alt="" width="28" height="28">
+      LiloSafio
+    </a>
+  </header>
+
+  <main class="seccion">
+    <h1 class="titulo">Esta pagina no existe</h1>
+    <p class="intro">
+      Quiza la direccion tiene una letra de mas, o el enlace estaba mal escrito.
+      El instalador y el resto de la web estan donde siempre.
+    </p>
+    <p style="margin-top:22px">
+      <a class="boton principal" href="./">Volver a la portada</a>
+    </p>
+    <p style="margin-top:18px">
+      O pide ayuda en el
+      <a href="https://discord.gg/wD5WvdSYgG" rel="noopener">Discord de LiloSafio</a>.
+    </p>
+  </main>
+</body>
+</html>

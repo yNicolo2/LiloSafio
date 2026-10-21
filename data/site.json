@@ -1,8 +1,8 @@
 {
-  "generado": "2026-10-11",
+  "generado": "2026-10-21",
   "app": {
     "nombre": "LiloSafio",
-    "version": "0.3.5",
+    "version": "0.3.6",
     "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
     "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
   },
@@ -16,19 +16,19 @@
   "descargas": {
     "principal": {
       "archivo": "LiloSafioInstalador.exe",
-      "mb": 424.9,
-      "sha256": "72e600eb904c46d70aeace08519e07b96744ed415503fa32e62d66e50e3d7416",
+      "mb": 425.1,
+      "sha256": "d5a4daa47d8e35025dd37f79c29c08d582121472ac526f7bcdfdba62a7f0c022",
       "titulo": "Instalador de un solo archivo",
       "nota": "Doble clic y se instala. No hay que descomprimir nada.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.5/LiloSafioInstalador.exe"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.6/LiloSafioInstalador.exe"
     },
     "respaldo": {
-      "archivo": "LiloSafio-0.3.5-win-x64.zip",
-      "mb": 416.6,
-      "sha256": "27f9bd18f4338898255d9930f3d9d9bfbf016e27b511f39b28379401de44e869",
+      "archivo": "LiloSafio-0.3.6-win-x64.zip",
+      "mb": 416.9,
+      "sha256": "5f428d7f737c400960cad27d88892eb4f92c656ccea8bd55c7ebbcdc08ad96ba",
       "titulo": "Carpeta comprimida (.zip)",
       "nota": "Solo si el antivirus te bloquea el archivo .exe.",
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.5/LiloSafio-0.3.5-win-x64.zip"
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.6/LiloSafio-0.3.6-win-x64.zip"
     }
   },
   "requisitos": [
@@ -52,13 +52,22 @@
   "servidor": {
     "ok": true,
     "miembros": 13,
-    "en_linea": 7,
+    "en_linea": 6,
     "nombre": "LiloSafio",
     "invitacion": "wD5WvdSYgG",
     "api": "",
-    "icono": "https://cdn.discordapp.com/icons/1554564740985000007/f8a3b21945761aba4ca9d971445b2858.png?size=128"
+    "icono": "https://cdn.discordapp.com/icons/1554564740985000007/ccab664094c6b939f122cdc03f686eb3.png?size=128"
   },
   "changelog": [
+    {
+      "version": "0.3.6",
+      "title": "Descarga de sonidos y texturas 100 veces mas rapida",
+      "changes": [
+        "Los assets se agrupan en un solo paquete y se bajan en 4 peticiones paralelas: de ~2 horas a unos minutos.",
+        "Solo se descargan los que faltan y cada uno se comprueba con SHA-1 al extraer.",
+        "Si se corta, se reanuda donde quedo en vez de empezar de cero."
+      ]
+    },
     {
       "version": "0.3.5",
       "title": "Los sonidos y los idiomas que faltan se completan solos",
@@ -376,6 +385,14 @@
   ],
   "versiones": [
     {
+      "version": "0.3.6",
+      "titulo": "LiloSafio 0.3.6",
+      "fecha": "2026-10-21",
+      "mb": 425.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.6/LiloSafioInstalador.exe",
+      "sha256": "d5a4daa47d8e35025dd37f79c29c08d582121472ac526f7bcdfdba62a7f0c022"
+    },
+    {
       "version": "0.3.5",
       "titulo": "0.3.5 - los sonidos que faltan se completan solos",
       "fecha": "2026-10-11",
@@ -446,14 +463,6 @@
       "mb": 583.1,
       "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.7/LiloSafioInstalador.exe",
       "sha256": "ce0bb6e44b0162e372564388154bc83a0c3974d2c97bfac5e7986c119ba57848"
-    },
-    {
-      "version": "0.2.6",
-      "titulo": "LiloSafio 0.2.6",
-      "fecha": "2026-10-03",
-      "mb": 583.1,
-      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.6/LiloSafioInstalador.exe",
-      "sha256": ""
     }
   ],
   "legal": {

@@ -1,0 +1,486 @@
+// Generado por tools\build_site.py. NO editar a mano:
+// se rehace en cada build desde config.py y changelog.py.
+window.LILO_DATA = {
+  "generado": "2026-10-20",
+  "app": {
+    "nombre": "LiloSafio",
+    "version": "0.3.6",
+    "lema": "Tu servidor de Minecraft, en un instalador y sin complicaciones.",
+    "resumen": "Instalador de un solo archivo para Windows: te deja el servidor listo con su modpack y lo abre desde el escritorio."
+  },
+  "owner": {
+    "nombre": "yNicolo",
+    "rol": "Owner de LiloSafio",
+    "pais": "España",
+    "piel": "assets/cabeza-yNicolo.png",
+    "discord": "https://discord.gg/wD5WvdSYgG"
+  },
+  "descargas": {
+    "principal": {
+      "archivo": "LiloSafioInstalador.exe",
+      "mb": 425.1,
+      "sha256": "d5a4daa47d8e35025dd37f79c29c08d582121472ac526f7bcdfdba62a7f0c022",
+      "titulo": "Instalador de un solo archivo",
+      "nota": "Doble clic y se instala. No hay que descomprimir nada.",
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.6/LiloSafioInstalador.exe"
+    },
+    "respaldo": {
+      "archivo": "LiloSafio-0.3.6-win-x64.zip",
+      "mb": 416.9,
+      "sha256": "5f428d7f737c400960cad27d88892eb4f92c656ccea8bd55c7ebbcdc08ad96ba",
+      "titulo": "Carpeta comprimida (.zip)",
+      "nota": "Solo si el antivirus te bloquea el archivo .exe.",
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.6/LiloSafio-0.3.6-win-x64.zip"
+    }
+  },
+  "requisitos": [
+    {
+      "nombre": "Windows",
+      "detalle": "10 o superior, de 64 bits"
+    },
+    {
+      "nombre": "Espacio",
+      "detalle": "Unos 8 GB libres (el juego ocupa la mayor parte)"
+    },
+    {
+      "nombre": "Red",
+      "detalle": "Solo hace falta para entrar al servidor y descargar el juego"
+    },
+    {
+      "nombre": "Cuentas",
+      "detalle": "Una cuenta de Minecraft y una de Discord"
+    }
+  ],
+  "servidor": {
+    "ok": true,
+    "miembros": 13,
+    "en_linea": 4,
+    "nombre": "LiloSafio",
+    "invitacion": "wD5WvdSYgG",
+    "api": "",
+    "icono": "https://cdn.discordapp.com/icons/1554564740985000007/ccab664094c6b939f122cdc03f686eb3.png?size=128"
+  },
+  "changelog": [
+    {
+      "version": "0.3.7",
+      "title": "Parche de velocidad de descarga de assets",
+      "changes": [
+        "Descarga agrupada en assets.tar.gz con rangos HTTP y 4 peticiones paralelas: de ~2 horas a minutos.",
+        "SHA-1 verificado por archivo al extraer; solo se bajan los que faltan."
+      ]
+    },
+    {
+      "version": "0.3.6",
+      "title": "Descarga de sonidos y texturas 100 veces mas rapida",
+      "changes": [
+        "Los assets se agrupan en un solo paquete y se bajan en 4 peticiones paralelas: de ~2 horas a unos minutos.",
+        "Solo se descargan los que faltan y cada uno se comprueba con SHA-1 al extraer.",
+        "Si se corta, se reanuda donde quedo en vez de empezar de cero."
+      ]
+    },
+    {
+      "version": "0.3.5",
+      "title": "Los sonidos y los idiomas que faltan se completan solos",
+      "changes": [
+        "Si el juego quedo instalado sin sonidos (las versiones rotas), Jugar los baja solos al arrancar.",
+        "Solo se baja lo que falta: lo que ya esta no se repite.",
+        "Si no se pueden bajar, el launcher lo dice en vez de arrancar mudo en silencio."
+      ]
+    },
+    {
+      "version": "0.3.4",
+      "title": "Java 21 incluido, sonido de vuelta y sin aviso fantasma",
+      "changes": [
+        "Java 21 integrado: si no tienes ninguno, el launcher baja el suyo solo (~190 MB, una vez).",
+        "Arreglado «no hay sonido»: la direccion de los sonidos estaba mal y no se bajaba ni uno.",
+        "Si los sonidos no se pueden bajar, Jugar lo dice en vez de arrancar mudo en silencio.",
+        "Quitado el aviso «faltan los archivos .jar» en instalaciones nuevas: solo sale si de verdad faltan.",
+        "El aviso cuenta los 83 mods que trae el zip, no el «1» que dice el manifiesto.",
+        "Se detecta la carpeta de mas aunque se llame «Milongsafio (1)»: se recoge sola."
+      ]
+    },
+    {
+      "version": "0.3.3",
+      "title": "Ya se sabe quien salio, y las descargas se reanudan solas",
+      "changes": [
+        "Arreglado «nunca sale quien ha salido»: el aviso se perdia al cerrar el launcher.",
+        "Al cerrar el launcher ahora se espera a que el aviso salga de verdad, con un tope de 3 s.",
+        "Minecraft se comprueba cinco veces mas a menudo, para no perder ese aviso por el camino.",
+        "El actualizador reintenta solo si se corta la conexion, hasta tres veces.",
+        "La descarga se reanuda por donde se quedo, en vez de empezar de cero.",
+        "Arreglado un fallo grave: una descarga cortada se daba por buena y se instalaba un .exe a medias.",
+        "La descarga dice cuantos MB lleva, a que velocidad y cuanto queda, no solo el porcentaje."
+      ]
+    },
+    {
+      "version": "0.3.2",
+      "title": "Los avisos ya tienen destino, y el launcher se mueve mejor",
+      "changes": [
+        "Arreglado «entra al juego y no aparece nada en el canal»: no habia destino de avisos puesto.",
+        "El reloj del launcher iba con 15 s de retraso: se veia la hora anterior al cambiar de minuto.",
+        "Al cambiar de pantalla, la animacion va ahora en el sentido del cambio y dura menos.",
+        "Respetado «reducir el movimiento» de Windows, que antes se ignoraba por completo.",
+        "Los avisos se mandan en orden: «ha salido» ya no puede llegar antes que «ha entrado».",
+        "Cuando los avisos estan desactivados, el registro lo dice en claro en vez de fallar en silencio.",
+        "Un rechazo del Worker (403) ahora explica si el usuario no esta en el servidor o falta el Server Members Intent.",
+        "La pagina /estado del Worker dice si falta algun secreto y comprueba que el token sirve de verdad."
+      ]
+    },
+    {
+      "version": "0.3.1",
+      "title": "El bot de Discord, en condiciones de estar encendido",
+      "changes": [
+        "El bot de Discord, en un proyecto propio: bot\\, con el token fuera del codigo.",
+        "Los sorteos se guardan en disco: antes se perdian en cada reinicio del proceso.",
+        "El bot reconecta solo y dice por que se caio, en vez de quedarse muerto en silencio.",
+        "Al apagarse bien, Discord no tarda un minuto en marcarlo como fuera de linea.",
+        "Añadido /avisos, que dice en que canal se anotan las entradas al juego.",
+        "npm run comprobar dice que falta y por que antes de arrancar.",
+        "El token del bot sale del .env, y .env esta en .gitignore."
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "title": "Cada entrada al juego queda anotada en tu Discord",
+      "changes": [
+        "Al abrir Minecraft se avisa a un canal de Discord, y al cerrar tambien.",
+        "Se anota el nombre de Minecraft y el usuario de Discord de quien entro.",
+        "El token del bot NO va dentro del launcher: lo guarda un Worker de Cloudflare.",
+        "Antes de escribir, el Worker comprueba que ese usuario este de verdad en tu servidor.",
+        "Hay un tope de mensajes por usuario y por hora, para que nadie llene el canal.",
+        "Si no hay nada configurado, no pasa nada: el launcher sigue igual."
+      ]
+    },
+    {
+      "version": "0.2.9",
+      "title": "Las actualizaciones ya no se cortan a mitad",
+      "changes": [
+        "Arreglado «el instalador es demasiado grande»: el tope de la descarga eran 300 MiB y el instalador pesa 583.",
+        "Ningún jugador podía actualizar: la descarga se paraba siempre a mitad.",
+        "El tope ahora son 1,5 GiB, con margen de sobra para que el instalador pueda crecer.",
+        "La descarga se lee en trozos de 1 MiB en vez de 64 KiB: va bastante mas rápida.",
+        "Añadida una prueba que baja el instalador entero y comprueba su huella, que es lo que faltaba.",
+        "El selfcheck mide el instalador de verdad y avisa si el tope se queda corto otra vez."
+      ]
+    },
+    {
+      "version": "0.2.8",
+      "title": "Los mods llegan a su sitio y se ve el instalador",
+      "changes": [
+        "Arreglado «faltan los archivos .jar»: el modpack se descomprimia con una carpeta de más y Minecraft no encontraba ningún mod.",
+        "Los 63 .jar ya están dentro de mods/ y las configuraciones dentro de config/.",
+        "Si ya tenias el juego instalado con el fallo, se arregla solo: los recoge de la carpeta.",
+        "El aviso ya no dice «solo trae la configuración», que mandaba a CurseForge a buscar 63 archivos que ya estaban en el disco.",
+        "Arreglado «necesita Java 21»: ahora se busca tambien donde Oracle lo instala de verdad y en el registro de Windows.",
+        "Si el launcher ve que la instalación no sirve, abre el instalador en vez de una pantalla de avisos sin salida.",
+        "Fuera el cartel de «esto tarda 20 segundos»: era un aviso de copia de archivos que sonaba a fallo."
+      ]
+    },
+    {
+      "version": "0.2.7",
+      "title": "Las descargas se comprueban y se ven",
+      "changes": [
+        "Arreglado el boton «Sitio web»: se veia bien y no hacia nada.",
+        "Ahora se comprueba la huella SHA-256 de lo descargado antes de instalar nada.",
+        "Cada release lleva su checksums.txt, y si no coincide, no se instala.",
+        "La descarga enseña los MB que llevas, a que velocidad y cuanto queda.",
+        "Nuevo boton «Sitio web» en el riel, junto al de unirse al servidor.",
+        "La web tiene una tabla de versiones con la huella de cada instalador."
+      ]
+    },
+    {
+      "version": "0.2.6",
+      "title": "Las actualizaciones ya funcionan de verdad",
+      "changes": [
+        "Arreglado «Buscar actualizacion»: miraba en un repositorio que no existe, asi que no podia funcionar.",
+        "Ahora consulta las releases de GitHub, que es lo unico que se publica solo sin montar nada.",
+        "Detecta la version anterior y ofrece instalarla: descarga el .exe y lo deja preparado.",
+        "El boton de actualizar ya no cae en un JSON que hay que editar a mano.",
+        "Nuevo boton «Sitio web» en el riel, junto al de unirse al servidor.",
+        "La web ya se ve bien al compartirla: sale con imagen, color y el logo de LiloSafio."
+      ]
+    },
+    {
+      "version": "0.2.5",
+      "title": "Un solo archivo y ya funciona",
+      "changes": [
+        "Ahora se reparte UN solo archivo .exe: doble clic y se abre el instalador.",
+        "No hay que descomprimir ni copiar carpetas: el archivo se abre solo.",
+        "El launcher instalado sigue arrancando rapido: no se descomprime cada vez.",
+        "Arreglado el build: PyInstaller ya no se corta con sus propios mensajes.",
+        "Arreglado el empaquetado: los archivos con mayusculas ya no se dan por perdidos."
+      ]
+    },
+    {
+      "version": "0.2.4",
+      "title": "Mucho mas pequeno, igual de bonito",
+      "changes": [
+        "El instalador baja de 972 MB a unos 800: ahora se puede mandar por mensaje.",
+        "Fuera los recursos de depuracion de Qt: eran 77 MB que no se ven nunca.",
+        "Fuera los 53 idiomas de Chromium y de Qt: solo se quedan espanol e ingles.",
+        "Fuera NumPy, que no se usaba: 26 MB de mas.",
+        "Fuera el QML de Qt, que no se usa: la interfaz es HTML.",
+        "Nada de esto cambia el aspecto ni un solo texto: es peso que no se veia.",
+        "Todo lo demade igual: Minecraft 1.21.1, NeoForge y los 63 mods."
+      ]
+    },
+    {
+      "version": "0.2.3",
+      "title": "Instala bien y la pantalla de inicio respira",
+      "changes": [
+        "Arreglado el «Failed to load Python DLL»: el launcher se desplegaba sin su carpeta _internal.",
+        "Ahora el instalador comprueba el paquete ANTES de copiar y avisa si le falta algo.",
+        "La copia se hace aparte y solo se cambia por la buena cuando esta verificada.",
+        "Un despliegue a medias ya no se da por bueno: se rehace en la siguiente instalacion.",
+        "Se va el aviso de RAM de la pantalla de inicio; el veredicto se lee en Configuracion.",
+        "Se va el hueco que dejaba la tarjeta del perfil debajo de tu avatar.",
+        "Preparando Jugar ahora teaches el porcentaje: se ve que esta avanzando.",
+        "La barra se mueve de verdad: Minecraft, NeoForge y los mods van por turnos.",
+        "El texto de al lado dice que esta haciendo en ese momento.",
+        "Ya no se abre la ventana negra de consola encima del launcher."
+      ]
+    },
+    {
+      "version": "0.2.2",
+      "title": "El juego arranca de verdad",
+      "changes": [
+        "Jugar YA arranca Minecraft: antes solo se descomprimian los mods y no habia juego.",
+        "Se descarga Minecraft 1.21.1, sus librerias y sus natives, y se instala NeoForge 21.1.",
+        "La primera vez tarda unos minutos bajando el juego. Despues, pulsar y jugar.",
+        "Arreglado el «list.index(x): x not in list»: era un fallo al escribir el registro de arranque.",
+        "Arreglado el «Too small maximum heap»: la memoria iba sin MB, asi que valian 4608 bytes.",
+        "Los mods ya no rompen el arranque: NeoForge entra por su cargador, no por el de vanilla.",
+        "Se deja de bajar lo de macOS: las librerias se filtran por tu sistema y tu arquitectura.",
+        "El modpack Milongsafio.zip dice su version y su autor dentro del manifiesto."
+      ]
+    },
+    {
+      "version": "0.2.1",
+      "title": "Acerca de con el autor",
+      "changes": [
+        "«Acerca de» dice quien hizo el launcher: Creado por yNicolo.",
+        "Su cabeza de Minecraft sale al lado, con su piel real de Mojang.",
+        "Si Mojang no responde, se dibuja el Steve de respaldo en vez de un hueco roto.",
+        "Se va el historial de los momentos del proyecto: ahora Acerca de va al grano.",
+        "El modpack ya viene COMPLETO: los 63 .jar de los mods viajan dentro del instalador.",
+        "Antes solo venía la configuración, así que el juego no tenía nada que cargar."
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "title": "Servidor obligatorio y sesion cifrada",
+      "changes": [
+        "Estar en el servidor de Discord es OBLIGATORIO para jugar.",
+        "Se quita «Ahora no»: no se puede entrar sin Discord.",
+        "Jugar se niega a arrancar si no hay conexion, sesion o servidor.",
+        "El bloqueo lo comprueba Discord, no el launcher: un .exe modificado no vale.",
+        "Comprobacion del rol de miembro cuando lo configures en el servidor.",
+        "Tu token de Discord se guarda cifrado con Windows (DPAPI).",
+        "Otro usuario del mismo PC ya no puede leer tu sesion.",
+        "El registro nunca escribe el token entero, ni al depurar.",
+        "El changelog del simulador se genera desde el de verdad: no hay dos copias."
+      ]
+    },
+    {
+      "version": "0.1.9",
+      "title": "El modpack entra y la memoria se usa",
+      "changes": [
+        "Jugar ahora arranca Minecraft de verdad con el nombre que escribiste.",
+        "La memoria que eliges llega a Java (-Xmx). Antes era un numero decorativo.",
+        "Aviso de memoria: te dice si los GB que pusiste sirven antes de que el juego muera.",
+        "Boton «Arreglar»: pone la memoria recomendada dejando 2 GB para Windows.",
+        "Se descomprime Milongsafio.zip en la carpeta del juego, con la configuración en su sitio.",
+        "Se avisa de cuántos mods hay de verdad y de los que faltan.",
+        "En Discord sale «Jugando LiloSafio con <tu nombre>» mientras estas dentro.",
+        "Java 21: se avisa si tienes una versión antigua, que Minecraft 1.21.1 no arranca con ella."
+      ]
+    },
+    {
+      "version": "0.1.8",
+      "title": "El avatar de Discord se ve",
+      "changes": [
+        "Correccion: ya sale TU foto de perfil en el riel y en la tarjeta de Discord.",
+        "El avatar se descarga a tu equipo y se pinta desde ahi, sin depender de internet.",
+        "Ya no se pierde el icono de Discord al abrir el launcher.",
+        "Si no tienes foto, se usa el avatar que Discord te asigna.",
+        "Se comprueba que lo descargado es una imagen de verdad antes de guardarlo."
+      ]
+    },
+    {
+      "version": "0.1.7",
+      "title": "Puerta de acceso con Discord",
+      "changes": [
+        "Pantalla de bienvenida al abrir LiloSafio: entra con Discord y a jugar.",
+        "Botón grande de acceso con el estilo de los launchers grandes.",
+        "La puerta se cierra sola en cuanto entras con Discord.",
+        "Si el acceso falla, el motivo se escribe en la propia pantalla, sin adivinar.",
+        "Se puede entrar sin Discord: si la conexion falla, el launcher sigue siendo usable.",
+        "Se ha quitado la sesion con Microsoft / Minecraft y todo su codigo.",
+        "Correccion: el receptor local se levanta ANTES de abrir el navegador.",
+        "Correccion: si falta registrar la redireccion, el error dice que copiar y donde.",
+        "La redireccion vive en un solo sitio (config.DISCORD_REDIRECT_URI)."
+      ]
+    },
+    {
+      "version": "0.1.6",
+      "title": "Cuentas reales y registro de cambios",
+      "changes": [
+        "Sesion real de Minecraft con Microsoft (retirada en la 0.1.7).",
+        "Changelog completo en Acerca de, desde la 0.1.0.",
+        "Correccion: el aviso de unirse al servidor vuelve a salir en cada arranque.",
+        "Correccion: «Ya me he unido» ya no revienta al comprobar la pertenencia.",
+        "Respaldo del icono si el avatar del CDN no se puede descargar."
+      ]
+    },
+    {
+      "version": "0.1.5",
+      "title": "Discord real y acceso obligatorio al servidor",
+      "changes": [
+        "La cuenta de Discord real se ve en el riel: avatar, @usuario y si estas dentro o no.",
+        "«Unirse al servidor» siempre visible: ya no se esconde si no hay sesion de Minecraft.",
+        "Comprobacion real de pertenencia con «Ya me he unido» (pregunta a Discord, no supone).",
+        "Botones «Conectar Discord» y «Desconectar» (desconectar revoca el token en Discord).",
+        "El aviso al arrancar vuelve a salir mientras falte unirse al servidor."
+      ]
+    },
+    {
+      "version": "0.1.4",
+      "title": "Actualizacion sin perder nada",
+      "changes": [
+        "Actualizar desde una version anterior conserva mundos, mods, cuenta y ajustes.",
+        "El instalador detecta la instalacion previa y cambia «Instalar» por «Actualizar».",
+        "Se respalda el manifiesto viejo antes de sobrescribirlo.",
+        "El acceso directo pasa a abrir el launcher (antes abria el instalador)."
+      ]
+    },
+    {
+      "version": "0.1.3",
+      "title": "Ajustes que de verdad se guardan",
+      "changes": [
+        "Memoria RAM ajustable y comprobacion de lo que hay en el PC.",
+        "LiloSafio no instala Java: detecta el que ya tengas y avisa si falta.",
+        "Comprobacion de actualizaciones desde Ajustes.",
+        "Desinstalador que dice exactamente que va a borrar antes de hacerlo."
+      ]
+    },
+    {
+      "version": "0.1.2",
+      "title": "El launcher de verdad",
+      "changes": [
+        "Pantalla principal con riel, Inicio, Ajustes, Acerca de y Registro.",
+        "Piel real del jugador y cuerpo completo en el riel.",
+        "Discord Rich Presence: LiloSafio aparece en el juego y en el perfil.",
+        "Sesion offline con nombre de jugador y UUID propio, sin pedir nada por internet."
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "title": "Instalador animado",
+      "changes": [
+        "Instalador en 3 pasos con progreso real y diseño animado.",
+        "Elige carpeta de instalacion y crea el acceso directo del escritorio.",
+        "El instalador SIEMPRE abre el asistente, nunca el launcher por su cuenta."
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "title": "Primera version",
+      "changes": [
+        "Instalador y launcher con la interfaz de LiloSafio.",
+        "Solo Minecraft 1.21.1 con NeoForge: una version, sin selector.",
+        "Botones de Discord para entrar al servidor de LiloSafio.",
+        "Assets generados por codigo y empaquetado con PyInstaller."
+      ]
+    }
+  ],
+  "versiones": [
+    {
+      "version": "0.3.5",
+      "titulo": "0.3.5 - los sonidos que faltan se completan solos",
+      "fecha": "2026-10-11",
+      "mb": 424.9,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.5/LiloSafioInstalador.exe",
+      "sha256": "72e600eb904c46d70aeace08519e07b96744ed415503fa32e62d66e50e3d7416"
+    },
+    {
+      "version": "0.3.4",
+      "titulo": "0.3.4 - sonidos, Java 21 y avisos",
+      "fecha": "2026-10-09",
+      "mb": 424.9,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.4/LiloSafioInstalador.exe",
+      "sha256": "7211bebb0783469347f1c78c6eac005e92b13e6900261dbdfee06d5c77f33185"
+    },
+    {
+      "version": "0.3.3",
+      "titulo": "LiloSafio 0.3.3 · Ya se sabe quien salio",
+      "fecha": "2026-10-04",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.3/LiloSafioInstalador.exe",
+      "sha256": "d4aea8adb5c403684edab0154edb4ed7339a8e7efc8c06e5160f7a48e0497970"
+    },
+    {
+      "version": "0.3.2",
+      "titulo": "LiloSafio 0.3.2 · Los avisos ya tienen destino",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.2/LiloSafioInstalador.exe",
+      "sha256": "ffdc8d837cc33886ad88a975817a370cfe50cfe9eea5f067fb395f8f8771c743"
+    },
+    {
+      "version": "0.3.1",
+      "titulo": "LiloSafio 0.3.1",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.1/LiloSafioInstalador.exe",
+      "sha256": "b7ad3eff7276776c5d61d4fcf855577bb4cbc8838aaab7ffa7750e9805bb9919"
+    },
+    {
+      "version": "0.3.0",
+      "titulo": "LiloSafio 0.3.0",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.3.0/LiloSafioInstalador.exe",
+      "sha256": "d63abc308c2230fee682d8fc34d1bb433f2904785d54f172c0627c9dccdd9471"
+    },
+    {
+      "version": "0.2.9",
+      "titulo": "LiloSafio 0.2.9",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.9/LiloSafioInstalador.exe",
+      "sha256": "5a8807b9995b25956386c79842ce8ad8f2aeaa30b8514ce1446fd664f3ce0bd0"
+    },
+    {
+      "version": "0.2.8",
+      "titulo": "LiloSafio 0.2.8",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.8/LiloSafioInstalador.exe",
+      "sha256": "322bf64f08ecb621741056f0336250b53dc6b6798b3815a921988a532abdabee"
+    },
+    {
+      "version": "0.2.7",
+      "titulo": "LiloSafio 0.2.7",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.7/LiloSafioInstalador.exe",
+      "sha256": "ce0bb6e44b0162e372564388154bc83a0c3974d2c97bfac5e7986c119ba57848"
+    },
+    {
+      "version": "0.2.6",
+      "titulo": "LiloSafio 0.2.6",
+      "fecha": "2026-10-03",
+      "mb": 583.1,
+      "url": "https://github.com/yNicolo2/LiloSafio/releases/download/0.2.6/LiloSafioInstalador.exe",
+      "sha256": ""
+    }
+  ],
+  "legal": {
+    "discord_app_id": "1554662437247123506",
+    "discord_servidor": "LiloSafio",
+    "discord_join_required": true,
+    "discord_scopes": "identify guilds guilds.members.read",
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.252"
+  }
+};
